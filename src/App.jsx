@@ -2,8 +2,8 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
+import Navbar from './Components/Navbar'
 
 
 function App() {
