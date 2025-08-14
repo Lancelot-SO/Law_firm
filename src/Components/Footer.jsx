@@ -59,7 +59,7 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <div className="flex items-start justify-between w-[1050px]">
+                        <div className="flex items-start justify-between lg:w-[1050px]">
                             {/* Who We Are */}
                             <div>
                                 <h3 className="text-lg font-medium mb-4 underline">Who We Are</h3>
