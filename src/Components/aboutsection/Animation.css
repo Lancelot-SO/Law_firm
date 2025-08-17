@@ -1,0 +1,63 @@
+.circle-draw {
+    stroke-dasharray: 754;
+    stroke-dashoffset: 754;
+    animation: drawCircle 2s ease-in-out forwards;
+}
+
+.circle-draw-delay-1 {
+    animation-delay: 0.5s;
+}
+
+.circle-draw-delay-2 {
+    animation-delay: 1s;
+}
+
+.dot-appear {
+    opacity: 0;
+    transform: scale(0);
+    animation: dotAppear 0.8s ease-out forwards;
+}
+
+.dot-appear-delay-1 {
+    animation-delay: 2.5s;
+}
+
+.dot-appear-delay-2 {
+    animation-delay: 2.8s;
+}
+
+.text-fade {
+    opacity: 0;
+    animation: textFade 1s ease-out forwards;
+}
+
+.text-fade-delay-1 {
+    animation-delay: 1.5s;
+}
+
+.text-fade-delay-2 {
+    animation-delay: 2s;
+}
+
+.text-fade-delay-3 {
+    animation-delay: 2.5s;
+}
+
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dotAppear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes textFade {
+    to {
+        opacity: 1;
+    }
+}
