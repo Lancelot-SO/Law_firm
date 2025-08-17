@@ -26,7 +26,7 @@ export default function BlogPage() {
                             </div>
                         </div>
                         <div className="text-white lg:w-[800px]">
-                            <h1 className="text-[20px] lg:text-[32px] font-bold font-garamond leading-[48px] mb-8 w-full">
+                            <h1 className="text-[20px] lg:text-[32px] font-bold font-garamond md:leading-[48px] leading-[24px] mb-8 w-full">
                                 We've Got The Experience, We Know The Terrain, And We Do A Hell Of A Job To Get You Favourable Results.
                             </h1>
                             <button

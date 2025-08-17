@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Twitter } from "lucide-react"
 import footerbg from "../assets/footerbg.png"
+import { Link } from "react-router-dom"
 
 export default function Footer() {
     return (
@@ -30,9 +31,9 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <button className="bg-[#7E1835] hover:bg-[#7E1835]/90 text-white px-8 py-3 text-lg font-medium">
+                    <Link to="/consultation" className="bg-[#7E1835] hover:bg-[#7E1835]/90 text-white px-8 py-3 text-lg font-medium">
                         Get a Consultation
-                    </button>
+                    </Link>
                 </div>
             </div>
 
