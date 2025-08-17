@@ -5,6 +5,10 @@ import AboutBio from '../Components/aboutsection/AboutBio'
 import NextAbout from '../Components/aboutsection/NextAbout'
 import Circles from '../Components/aboutsection/Circles'
 import AboutTower from '../Components/aboutsection/AboutTower'
+import AboutBalance from '../Components/aboutsection/AboutBalance'
+import BalanceSection from '../Components/homesection/BalanceSection'
+import Reach from '../Components/aboutsection/Reach'
+import TestimonialSlider from '../Components/homesection/TestimonialSlider'
 
 const About = () => {
     return (
@@ -13,6 +17,11 @@ const About = () => {
             <NextAbout />
             <Circles />
             <AboutTower />
+            <AboutBalance />
+            <BalanceSection />
+            <Reach />
+            {/* Add Partners section here */}
+            <TestimonialSlider />
         </div>
     )
 }

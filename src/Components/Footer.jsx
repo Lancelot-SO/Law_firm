@@ -1,13 +1,14 @@
 import { Facebook, Instagram, Twitter } from "lucide-react"
+import footerbg from "../assets/footerbg.png"
 
 export default function Footer() {
     return (
-        <div className="min-h-screen">
+        <div className="">
             {/* Hero Section with Contact Info */}
             <div
-                className="relative bg-black/80 text-white py-20 px-4 lg:px-12 4xl:px-32"
+                className="relative text-white py-20 px-4 lg:px-12 4xl:px-32"
                 style={{
-                    backgroundImage: "url('/images/gavel.png')",
+                    backgroundImage: `url(${footerbg})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundBlendMode: "overlay",
@@ -37,7 +38,7 @@ export default function Footer() {
 
             {/* Footer Section */}
             <footer className="bg-[#7E1835] text-white py-12 px-4 lg:px-12 4xl:px-32">
-                <div className=" mx-auto">
+                <div className="">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {/* Logo and Social Media */}
                         <div className="space-y-6">
