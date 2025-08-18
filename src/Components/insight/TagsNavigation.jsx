@@ -2,17 +2,11 @@
 import { useState } from "react"
 import { Search } from "lucide-react"
 import blockbg from "../../assets/home/blockbg.png"
-import LegalBlogPage from "../blogpost/LegalBlogPage"
+import { tags as insightTags } from "../../main.js" // import tags from data.js
+import Blogs from "./Blogs.jsx"
 
-const tags = [
-    "ALL",
-    "BANKRUPTCY",
-    "WORLD",
-    "JUSTICE LAW",
-    "LAND LAW",
-    "POLITICAL INDEPENDENCE",
-    "LAW RESOURCES",
-]
+// Generate tag list dynamically (with ALL at the start)
+const tags = ["ALL", ...insightTags.map(tag => tag.name)]
 
 export default function TagsNavigation() {
     const [activeTag, setActiveTag] = useState("ALL")
@@ -22,7 +16,7 @@ export default function TagsNavigation() {
     return (
         <div>
             <div className="w-full border-b border-gray-200 bg-white">
-                <div className="flex items-center justify-between px-6 py-4">
+                <div className="flex items-center justify-between px-4 lg:px-12 4xl:px-32 py-4">
                     {/* Tags Navigation */}
                     <nav className="flex items-center md:space-x-8 space-x-4 w-[300px] overflow-x-auto scrollbar-hide md:overflow-visible md:flex-nowrap">
                         {tags.map((tag) => (
@@ -100,21 +94,13 @@ export default function TagsNavigation() {
                             <h1 className="text-[20px] lg:text-[32px] font-bold font-garamond md:leading-[48px] leading-[24px] mb-8 w-full">
                                 We've Got The Experience, We Know The Terrain, And We Do A Hell Of A Job To Get You Favourable Results.
                             </h1>
-                            {/* <button
-                                className="bg-white text-[#7E1835] hover:bg-gray-100 font-semibold px-8 py-3 rounded-md transition-colors"
-                                type="button"
-                                onClick={() => (window.location.href = "/blog")}
-                            >
-                                Read More
-                            </button> */}
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <LegalBlogPage />
-            </section>
+            <Blogs activeTag={activeTag} searchQuery={searchQuery} />
+
         </div>
     )
 }

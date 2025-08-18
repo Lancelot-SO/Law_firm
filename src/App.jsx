@@ -9,7 +9,7 @@ import About from './Pages/About'
 import MainTeam from './Pages/MainTeam'
 import Consult from './Pages/Consult'
 import Insights from './Pages/Insights'
-import BlogDetail from './Components/blogpost/BlogDetail'
+import BlogDetails from './Components/insight/BlogDetails'
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/team' element={<MainTeam />} />
           <Route path='/insights' element={<Insights />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path='/blog/:id' element={<BlogDetails />} />
           <Route path='/consultation' element={<Consult />} />
         </Routes>
         <Footer />
