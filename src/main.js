@@ -20,6 +20,7 @@ const insightsData = [
         excerpt: 'In an age of digital overload, physical brand experiences still create the deepest connections...',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
         tags: 'bankruptcy',
+        views: 120
 
     },
     {
@@ -30,6 +31,8 @@ const insightsData = [
         excerpt: 'Great campaigns don’t just look good — they perform. From smart channel planning to aligning creative…',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
         tags: 'world',
+        views: 140
+
 
     },
     {
@@ -40,26 +43,31 @@ const insightsData = [
         excerpt: 'With rising youth populations, increased mobile usage, and a shift in cultural engagement…',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
         tags: 'justice',
+        views: 100
+
 
     },
     {
         id: 4,
-        title: 'The Future of BTL Marketing in Africa',
+        title: 'The Future of BTL in Africa',
         image: Insight1,
         date: "April 25, 2025",
         excerpt: 'With rising youth populations, increased mobile usage, and a shift in cultural engagement…',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
         tags: 'land',
+        views: 20
+
 
     },
     {
         id: 5,
-        title: 'The Future of BTL Marketing in Africa',
+        title: 'The Future of BTL Marketing',
         image: Insight1,
         date: "April 26, 2025",
         excerpt: 'With rising youth populations, increased mobile usage, and a shift in cultural engagement…',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
         tags: 'political',
+        views: 10
 
     },
 ];

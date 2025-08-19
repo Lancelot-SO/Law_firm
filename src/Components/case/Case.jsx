@@ -1,13 +1,13 @@
-/* eslint-disable no-irregular-whitespace */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { IoIosMail } from 'react-icons/io'
-import consultbg from "../assets/consultbg.png"
-import Contact from '../Components/Contact'
+import casebg from "../../assets/case/casebg.png"
+import CaseTags from './CaseTags'
 
-const Consult = () => {
+const Case = () => {
 
     const containerVariants = {
         hidden: {},
@@ -32,8 +32,8 @@ const Consult = () => {
                 animate="visible"
             >
                 <motion.img
-                    src={consultbg}
-                    alt="consult background"
+                    src={casebg}
+                    alt="case background"
                     className="h-full w-full object-cover"
                     variants={itemVariants}
                 />
@@ -47,13 +47,13 @@ const Consult = () => {
                             className="font-garamond font-semibold leading-[70px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
-                            Y
+                            C
                         </motion.span>
                         <motion.span
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            our problem is quite literally our business.
+                            <span>ase Studies: Legal Strategy in Action.</span>
                         </motion.span>
                     </span>
 
@@ -61,7 +61,7 @@ const Consult = () => {
                         className="w-[535px] text-[12px] leading-5 font-normal text-white"
                         variants={itemVariants}
                     >
-                        we don’t just offer legal advice — we take on your challenges as our own. Whether it’s navigating a complex dispute, securing your business interests, or protecting your rights, we’re here to provide clear, strategic, and results-driven counsel. Your problem is our priority — let’s solve it together. Give us a call.                    </motion.span>
+                        At Kwame Akuffo & Co., our work speaks through results. These case studies showcase how we've helped Clients overcome complex legal challenges with clarity, precision, and strategic insight. From high-stakes litigation to sensitive negotiations, explore how our legal expertise delivers real-world impact.                         </motion.span>
 
                     {/* <motion.div variants={itemVariants}>
                         <Link
@@ -107,8 +107,8 @@ const Consult = () => {
                 animate="visible"
             >
                 <motion.img
-                    src={consultbg}
-                    alt="consult mobile background"
+                    src={casebg}
+                    alt="case mobile background"
                     className="absolute inset-0 w-full h-full object-cover"
                     variants={itemVariants}
                 />
@@ -121,17 +121,16 @@ const Consult = () => {
                         variants={itemVariants}
                     >
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
-                            Y
+                            C
                         </span>
-                        <span> our problem is quite literally our business.</span>
+                        <span> ase Studies: Legal Strategy in Action.</span>
                     </motion.h1>
 
                     <motion.p
                         className="text-white text-sm sm:text-base leading-relaxed"
                         variants={itemVariants}
                     >
-                        we don’t just offer legal advice — we take on your challenges as our own. Whether it’s navigating a complex dispute, securing your business interests, or protecting your rights, we’re here to provide clear, strategic, and results-driven counsel. Your problem is our priority — let’s solve it together. Give us a call.
-                    </motion.p>
+                        At Kwame Akuffo & Co., our work speaks through results. These case studies showcase how we've helped Clients overcome complex legal challenges with clarity, precision, and strategic insight. From high-stakes litigation to sensitive negotiations, explore how our legal expertise delivers real-world impact.                        </motion.p>
 
                     {/* <motion.div variants={itemVariants}>
                         <Link
@@ -168,14 +167,9 @@ const Consult = () => {
                     </motion.div>
                 </div>
             </motion.div>
-
-            <Contact />
-
-            <section className='w-full'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4198.26268685128!2d-0.18803469999999997!3d5.600867199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9bf95db9a77d%3A0x18b3fd03fd5be6e4!2sKwame%20Akuffo%20and%20Co%20Unlimited!5e1!3m2!1sen!2sgh!4v1755609271413!5m2!1sen!2sgh" width="100%" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-            </section>
+            <CaseTags />
         </div>
     )
 }
 
-export default Consult
+export default Case

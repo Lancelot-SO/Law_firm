@@ -13,7 +13,7 @@ export default function Navbar() {
         { name: 'About Us', path: '/about' },
         { name: 'Practice Area', path: '/practice-area' },
         { name: 'Our Team', path: '/team' },
-        { name: 'Case Studies', path: '/case-studies' },
+        { name: 'Case Studies', path: '/case' },
         { name: 'Insights', path: '/insights' },
     ]
 

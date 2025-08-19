@@ -44,14 +44,14 @@ export default function Blogs({ activeTag, searchQuery }) {
                                 className="w-full h-80 object-cover rounded-lg"
                             />
                             <div className="flex flex-col justify-center">
-                                <p className="text-sm text-red-600 font-medium mb-2">
+                                <p className="text-sm text-[#7E1835] font-medium mb-2">
                                     {currentPosts[0].tags} | {currentPosts[0].date}
                                 </p>
                                 <h2 className="text-2xl font-bold mb-3">{currentPosts[0].title}</h2>
                                 <p className="text-gray-600 mb-4">{currentPosts[0].excerpt}</p>
                                 <Link
                                     to={`/blog/${currentPosts[0].id}`}
-                                    className="text-red-600 font-medium hover:underline"
+                                    className="text-[#7E1835] font-medium hover:underline"
                                 >
                                     Read More
                                 </Link>
@@ -69,14 +69,14 @@ export default function Blogs({ activeTag, searchQuery }) {
                                     className="w-full h-48 object-cover"
                                 />
                                 <div className="p-4">
-                                    <p className="text-xs text-red-600 font-medium mb-1">
+                                    <p className="text-xs text-[#7E1835] font-medium mb-1">
                                         {post.tags} | {post.date}
                                     </p>
                                     <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
                                     <p className="text-gray-600 text-sm mb-3">{post.excerpt}</p>
                                     <Link
                                         to={`/blog/${post.id}`}
-                                        className="text-red-600 text-sm font-medium hover:underline"
+                                        className="text-[#7E1835] text-sm font-medium hover:underline"
                                     >
                                         Read More
                                     </Link>
@@ -100,7 +100,7 @@ export default function Blogs({ activeTag, searchQuery }) {
                                     key={i + 1}
                                     onClick={() => setCurrentPage(i + 1)}
                                     className={`px-3 py-1 rounded ${currentPage === i + 1
-                                        ? "text-red-600 font-bold"
+                                        ? "text-[#] font-bold"
                                         : "text-gray-500"
                                         }`}
                                 >
@@ -136,7 +136,7 @@ export default function Blogs({ activeTag, searchQuery }) {
                             placeholder="Enter your email"
                             className="w-full border rounded px-3 py-2 text-sm mb-3"
                         />
-                        <button className="w-full bg-red-600 text-white py-2 rounded text-sm font-medium hover:bg-red-700">
+                        <button className="w-full bg-[#7E1835] text-white py-2 rounded text-sm font-medium hover:bg-[#7E1835]/80">
                             Subscribe
                         </button>
                     </div>

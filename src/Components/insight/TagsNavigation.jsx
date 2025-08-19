@@ -28,7 +28,7 @@ export default function TagsNavigation() {
                             >
                                 {tag}
                                 {activeTag === tag && (
-                                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-500" />
+                                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#7E1835]" />
                                 )}
                             </button>
                         ))}

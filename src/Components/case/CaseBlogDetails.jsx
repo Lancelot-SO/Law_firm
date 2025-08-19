@@ -1,27 +1,30 @@
 /* eslint-disable react/no-unescaped-entities */
+// src/case/CaseStudyDetails.jsx
 import { useParams, Link } from "react-router-dom"
+import caseData from "../../case"
 import { motion } from 'framer-motion'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { IoIosMail } from 'react-icons/io'
 import casebg from "../../assets/case/casebg.png"
-import insightsData from "../../main.js"
+import ReactMarkdown from "react-markdown"
 
-export default function BlogDetails() {
+
+
+export default function CaseBlogDetails() {
     const { id } = useParams()
-    const blog = insightsData.find((post) => post.id === parseInt(id))
+    const post = caseData.find((item) => item.id === parseInt(id))
 
-
-    // --- Dynamic Lists ---
-    const latestNews = [...insightsData]
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 3); // top 3 latest
-
-    const popularNews = [...insightsData]
-        .sort((a, b) => b.views - a.views) // requires "views" field in insightsData
-        .slice(0, 3); // top 3 popular
-
-    if (!blog) {
-        return <p>Blog not found.</p>
+    if (!post) {
+        return (
+            <div className="p-8 text-center">
+                <h2 className="text-2xl font-bold text-[#7E1835]">
+                    Case study not found
+                </h2>
+                <Link to="/case" className="text-blue-600 underline">
+                    Back to Case Studies
+                </Link>
+            </div>
+        )
     }
 
     const containerVariants = {
@@ -39,7 +42,6 @@ export default function BlogDetails() {
     }
 
     return (
-
         <div>
             {/* Desktop hero */}
             <motion.div
@@ -64,13 +66,13 @@ export default function BlogDetails() {
                             className="font-garamond font-semibold leading-[70px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
-                            T
+                            C
                         </motion.span>
                         <motion.span
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span>he Legal Lens: Informed, Strategic, Sharp.</span>
+                            <span>ase Studies: Legal Strategy in Action.</span>
                         </motion.span>
                     </span>
 
@@ -81,13 +83,13 @@ export default function BlogDetails() {
                         At Kwame Akuffo & Co., our work speaks through results. These case studies showcase how we've helped Clients overcome complex legal challenges with clarity, precision, and strategic insight. From high-stakes litigation to sensitive negotiations, explore how our legal expertise delivers real-world impact.                         </motion.span>
 
                     {/* <motion.div variants={itemVariants}>
-                                    <Link
-                                        to="/contact"
-                                        className="bg-[#7E1835] text-white w-[122px] h-[39px] flex items-center justify-center text-[10px] font-bold leading-[15px] tracking-[1%]"
-                                    >
-                                        Practice Area
-                                    </Link>
-                                </motion.div> */}
+                        <Link
+                            to="/contact"
+                            className="bg-[#7E1835] text-white w-[122px] h-[39px] flex items-center justify-center text-[10px] font-bold leading-[15px] tracking-[1%]"
+                        >
+                            Practice Area
+                        </Link>
+                    </motion.div> */}
                 </motion.div>
 
                 <motion.div
@@ -138,9 +140,9 @@ export default function BlogDetails() {
                         variants={itemVariants}
                     >
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
-                            T
+                            C
                         </span>
-                        <span>he Legal Lens: Informed, Strategic, Sharp.</span>
+                        <span> ase Studies: Legal Strategy in Action.</span>
                     </motion.h1>
 
                     <motion.p
@@ -151,13 +153,13 @@ export default function BlogDetails() {
                     </motion.p>
 
                     {/* <motion.div variants={itemVariants}>
-                                    <Link
-                                        to="/contact"
-                                        className="bg-[#7E1835] text-white inline-block px-5 py-2 text-xs sm:text-sm font-bold rounded"
-                                    >
-                                        Practice Area
-                                    </Link>
-                                </motion.div> */}
+                        <Link
+                            to="/contact"
+                            className="bg-[#7E1835] text-white inline-block px-5 py-2 text-xs sm:text-sm font-bold rounded"
+                        >
+                            Practice Area
+                        </Link>
+                    </motion.div> */}
 
                     <motion.div
                         className="mt-8 flex flex-col sm:flex-row sm:gap-8 gap-4"
@@ -185,142 +187,111 @@ export default function BlogDetails() {
                     </motion.div>
                 </div>
             </motion.div>
-
-
-            <div className="mx-auto py-12 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Main Blog Content */}
+            {/* Main Content Area */}
+            <section className="px-4 lg:px-12 4xl:px-32 py-12 grid grid-cols-1 lg:grid-cols-3 gap-12">
+                {/* Left: Article Content */}
                 <motion.div
-                    className="md:col-span-2"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6 }}
+                    className="lg:col-span-2"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
                 >
-                    {/* Blog Image */}
+                    {/* Featured Image */}
                     <motion.img
-                        src={blog.image}
-                        alt={blog.title}
-                        className="w-full h-96 object-cover rounded-lg mb-6"
-                        initial={{ scale: 0.95, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-96 object-cover rounded-lg mb-8"
+                        variants={itemVariants}
                     />
 
-                    {/* Blog Meta */}
-                    <motion.p
-                        className="text-sm text-gray-500 mb-2"
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        {blog.date}
-                    </motion.p>
-
-                    {/* Blog Title */}
+                    {/* Title & Date */}
                     <motion.h1
-                        className="text-3xl font-bold mb-4"
-                        initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="text-3xl font-bold text-[#7E1835] mb-4"
+                        variants={itemVariants}
                     >
-                        {blog.title}
+                        {post.title}
                     </motion.h1>
-
-                    {/* Blog Content */}
                     <motion.p
-                        className="text-gray-700 leading-relaxed"
-                        initial={{ y: 40, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="text-sm text-gray-500 mb-8"
+                        variants={itemVariants}
                     >
-                        {blog.content}
+                        {post.date} • {post.tags}
                     </motion.p>
 
-                    {/* Back Link */}
+                    {/* Case Content (Markdown Support) */}
                     <motion.div
-                        className="mt-6"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.6 }}
+                        className="prose max-w-none text-gray-700 leading-relaxed"
+                        variants={itemVariants}
                     >
-                        <Link to="/insights" className="text-[#7E1835] hover:underline">
-                            ← Back to Insights
-                        </Link>
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
                     </motion.div>
                 </motion.div>
 
-                {/* Sidebar */}
-                <aside className="w-full  space-y-10">
+                {/* Right: Sidebar */}
+                <aside className="lg:col-span-1 space-y-8">
                     {/* Newsletter */}
-                    <div className="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 className="text-lg font-semibold mb-3">Subscribe to Newsletter</h3>
-                        <p className="text-sm text-gray-600 mb-4">
-                            Get the latest updates right in your inbox.
-                        </p>
+                    <div className="border p-6 rounded-lg shadow-sm">
+                        <h3 className="text-lg font-semibold text-[#7E1835] mb-4">
+                            Newsletter
+                        </h3>
                         <input
                             type="email"
-                            placeholder="Enter your email"
-                            className="w-full border rounded px-3 py-2 text-sm mb-3"
+                            placeholder="Your Email"
+                            className="w-full border px-3 py-2 mb-3 rounded outline-none focus:ring-2 focus:ring-[#7E1835]"
                         />
-                        <button className="w-full bg-[#7E1835] text-white py-2 rounded text-sm font-medium hover:bg-[#7E1835]/80">
+                        <button className="w-full bg-[#7E1835] text-white py-2 rounded">
                             Subscribe
                         </button>
                     </div>
 
-                    {/* Latest News */}
+                    {/* Latest Case Studies */}
                     <div>
-                        <h3 className="text-[#7E1835] mb-3">Latest News</h3>
-                        <div className="space-y-5">
-                            {latestNews.map((news, i) => (
-                                <div key={i} className="flex gap-3">
-                                    <img
-                                        src={news.image}
-                                        alt={news.title}
-                                        className="w-20 h-20 object-cover rounded"
-                                    />
-                                    <div>
-                                        <h4 className="text-sm font-semibold leading-snug line-clamp-2">
-                                            {news.title}
-                                        </h4>
-                                        <a
-                                            href={`/blog/${news.id}`}
-                                            className="text-[#7E1835] text-xs hover:underline"
-                                        >
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                        <h3 className="text-lg sm:text-xl font-semibold text-[#7E1835] mb-6">
+                            Latest Case Studies
+                        </h3>
 
-                    {/* Popular News */}
-                    <div>
-                        <h3 className="text-[#7E1835] mb-3">Popular News</h3>
                         <div className="space-y-5">
-                            {popularNews.map((news, i) => (
-                                <div key={i} className="flex gap-3">
-                                    <img
-                                        src={news.image}
-                                        alt={news.title}
-                                        className="w-20 h-20 object-cover rounded"
-                                    />
-                                    <div>
-                                        <h4 className="text-sm font-semibold leading-snug line-clamp-2">
-                                            {news.title}
-                                        </h4>
-                                        <a
-                                            href={`/blog/${news.id}`}
-                                            className="text-[#7E1835] text-xs hover:underline"
-                                        >
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
+                            {caseData.slice(0, 3).map((item, i) => (
+                                <motion.div
+                                    key={item.id}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: i * 0.2 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Link
+                                        to={`/case/${item.id}`}
+                                        className="block relative group  overflow-hidden shadow-md hover:shadow-lg transition"
+                                    >
+                                        {/* Background Image */}
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+
+                                        {/* Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+
+                                        {/* Text */}
+                                        <div className="absolute bottom-3 left-3 right-3">
+                                            <p className="text-white text-sm sm:text-base font-semibold mb-1">
+                                                {item.title}
+                                            </p>
+                                            <motion.span
+                                                whileHover={{ x: 4 }}
+                                                className="text-white/90 text-xs sm:text-sm font-medium inline-flex items-center gap-1"
+                                            >
+                                                Read More →
+                                            </motion.span>
+                                        </div>
+                                    </Link>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
                 </aside>
-            </div>
+            </section>
         </div>
     )
 }

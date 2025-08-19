@@ -10,6 +10,9 @@ import MainTeam from './Pages/MainTeam'
 import Consult from './Pages/Consult'
 import Insights from './Pages/Insights'
 import BlogDetails from './Components/insight/BlogDetails'
+import CaseStudies from './Pages/CaseStudies'
+import CaseBlogDetails from './Components/case/CaseBlogDetails'
+import PracticalArea from './Pages/PracticalArea'
 
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
           <Route path='/insights' element={<Insights />} />
           <Route path='/blog/:id' element={<BlogDetails />} />
           <Route path='/consultation' element={<Consult />} />
+          <Route path='/case' element={<CaseStudies />} />
+          <Route path='/case/:id' element={<CaseBlogDetails />} />
+          <Route path='/practice-area' element={<PracticalArea />} />
         </Routes>
         <Footer />
       </BrowserRouter>
