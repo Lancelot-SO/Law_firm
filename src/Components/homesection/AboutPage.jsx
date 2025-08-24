@@ -3,6 +3,7 @@ import React from 'react';
 import { CheckCircle2, Award } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import mallet from "../../assets/home/mallet.png"
+import { Link } from 'react-router-dom';
 
 export default function AboutPage() {
     const prefersReducedMotion = useReducedMotion();
@@ -155,9 +156,9 @@ export default function AboutPage() {
                                     viewport={{ once: true, amount: 0.3 }}
                                     className="mt-4"
                                 >
-                                    <button className="w-full sm:w-auto bg-[#7E1835] px-10 py-2 text-white hover:bg-[#6b1824] focus:outline-none">
+                                    <Link to="/about" className="w-full sm:w-auto bg-[#7E1835] px-10 py-4 text-white hover:bg-[#6b1824] focus:outline-none">
                                         Read More
-                                    </button>
+                                    </Link>
                                 </motion.div>
                             </motion.div>
                         </motion.div>

@@ -75,7 +75,7 @@ const Hero = () => {
 
                     <motion.div variants={itemVariants}>
                         <Link
-                            to="/contact"
+                            to="/practice-area"
                             className="bg-[#7E1835] text-white w-[122px] h-[39px] flex items-center justify-center text-[10px] font-bold leading-[15px] tracking-[1%]"
                         >
                             Practice Area
@@ -147,7 +147,7 @@ const Hero = () => {
 
                     <motion.div variants={itemVariants}>
                         <Link
-                            to="/contact"
+                            to="/practice-area"
                             className="bg-[#7E1835] text-white inline-block px-5 py-2 text-xs sm:text-sm font-bold rounded"
                         >
                             Practice Area

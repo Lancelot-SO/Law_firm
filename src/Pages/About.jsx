@@ -9,6 +9,7 @@ import AboutBalance from '../Components/aboutsection/AboutBalance'
 import BalanceSection from '../Components/homesection/BalanceSection'
 import Reach from '../Components/aboutsection/Reach'
 import TestimonialSlider from '../Components/homesection/TestimonialSlider'
+import Partners from '../Components/aboutsection/Partners'
 
 const About = () => {
     return (
@@ -20,7 +21,7 @@ const About = () => {
             <AboutBalance />
             <BalanceSection />
             <Reach />
-            {/* Add Partners section here */}
+            <Partners />
             <TestimonialSlider />
         </div>
     )

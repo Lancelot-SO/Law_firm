@@ -12,6 +12,7 @@ import icon2 from "../assets/practical/icon2.png"
 
 import { ArrowRight } from "lucide-react"
 import practicebook from "../assets/practical/practicebook.png"
+import { Link } from 'react-router-dom'
 
 
 
@@ -215,11 +216,16 @@ const PracticalArea = () => {
             <section className="flex flex-col gap-4 bg-[#F2E8EB]">
                 {/* Litigation Card */}
                 <div className="flex flex-col items-center justify-center py-4">
-                    <div className="flex flex-col lg:flex-row w-full h-auto px-4 lg:px-12 4xl:px-32 border-b-2 border-[#ECDCE1]">
+                    <div className="group flex flex-col lg:flex-row w-full h-auto px-4 lg:px-12 4xl:px-32 border-b-2 border-[#ECDCE1]">
 
                         {/* Icon */}
                         <div className="flex w-full lg:w-1/3 items-center justify-center lg:justify-start mb-4 lg:mb-0">
-                            <img src={icon1} alt="Placeholder" loading="lazy" className="w-12 h-12 lg:w-auto lg:h-auto" />
+                            <img
+                                src={icon1}
+                                alt="Placeholder"
+                                loading="lazy"
+                                className="w-12 h-12 lg:w-auto lg:h-auto"
+                            />
                         </div>
 
                         {/* Text + Button */}
@@ -233,20 +239,19 @@ const PracticalArea = () => {
                                     litigation, with a particular strength in complex and
                                     precedent-setting cases.
                                 </span>
-                                <button
-                                    onClick={() => toggleSection("litigation")}
+
+                                {/* Route Button */}
+                                <Link
+                                    to="/litigation"
                                     className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                                 >
                                     <ArrowRight />
-                                </button>
+                                </Link>
                             </div>
 
-                            {/* Collapsible Image */}
+                            {/* Hover Image */}
                             <div
-                                className={`overflow-hidden transition-all duration-500 ${open.litigation
-                                    ? "max-h-[200px] opacity-100 mt-4"
-                                    : "max-h-0 opacity-0"
-                                    }`}
+                                className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 mt-4"
                             >
                                 <img
                                     src={practicebook}
@@ -261,11 +266,16 @@ const PracticalArea = () => {
 
                 {/* Due Diligence Card */}
                 <div className="flex flex-col items-center justify-center py-4">
-                    <div className="flex flex-col lg:flex-row w-full h-auto px-4 lg:px-12 4xl:px-32 border-b-2 border-[#ECDCE1]">
+                    <div className="group flex flex-col lg:flex-row w-full h-auto px-4 lg:px-12 4xl:px-32 border-b-2 border-[#ECDCE1]">
 
                         {/* Icon */}
                         <div className="flex w-full lg:w-1/3 items-center justify-center lg:justify-start mb-4 lg:mb-0">
-                            <img src={icon2} alt="Placeholder" loading="lazy" className="w-12 h-12 lg:w-auto lg:h-auto" />
+                            <img
+                                src={icon2}
+                                alt="Placeholder"
+                                loading="lazy"
+                                className="w-12 h-12 lg:w-auto lg:h-auto"
+                            />
                         </div>
 
                         {/* Text + Button */}
@@ -279,20 +289,19 @@ const PracticalArea = () => {
                                     acquisitions, real estate transactions, and regulatory
                                     compliance.
                                 </span>
-                                <button
-                                    onClick={() => toggleSection("diligence")}
+
+                                {/* Route Button */}
+                                <Link
+                                    to="/diligence"
                                     className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                                 >
                                     <ArrowRight />
-                                </button>
+                                </Link>
                             </div>
 
-                            {/* Collapsible Image */}
+                            {/* Hover Image */}
                             <div
-                                className={`overflow-hidden transition-all duration-500 ${open.diligence
-                                    ? "max-h-[200px] opacity-100 mt-4"
-                                    : "max-h-0 opacity-0"
-                                    }`}
+                                className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 mt-4"
                             >
                                 <img
                                     src={practicebook}

@@ -3,6 +3,7 @@ import React from 'react'
 import balance from "../../assets/home/balance.png"
 import court from "../../assets/home/court.png"
 import LegalStats from './LegalStats'
+import { Link } from 'react-router-dom'
 
 
 const BalanceSection = () => {
@@ -24,15 +25,15 @@ const BalanceSection = () => {
                             <span className="text-white text-[14px] font-playfair">Why Kwame Akuffo & Co.</span>
                         </div>
 
-                        <div>
-                            <h2 className=" text-white font-garamond font-semibold text-2xl sm:text-3xl lg:text-4xl">
+                        <div className=''>
+                            <h2 className=" text-white font-garamond font-semibold text-2xl sm:text-3xl lg:text-4xl mb-10">
                                 We Don’t Play The Odds. We Shape Them.
                             </h2>
 
                             {/* CTA */}
-                            <button className="mt-6 bg-white text-[#7E1835] px-10 py-4 font-medium hover:bg-gray-100 transition">
+                            <Link to="/about" className="mt-6 bg-white text-[#7E1835] px-10 py-4 font-medium hover:bg-gray-100 transition">
                                 Learn More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                     <LegalStats />

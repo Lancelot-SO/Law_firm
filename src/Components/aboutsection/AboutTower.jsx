@@ -61,15 +61,14 @@ const AboutTower = () => {
                 <div className="flex flex-col lg:flex-row w-full h-[auto] lg:h-[550px]">
                     {/* Left Column */}
                     <motion.div
-                        className="lg:w-1/3 h-[600px] relative px-4 md:px-0"
+                        className="lg:w-1/3 h-[600px] relative px-4 md:px-0 4xl:px-32"
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                     >
-                        <div className="py-4 w-full h-auto text-[#7E1835] lg:pl-12">
+                        <div className="py-4 w-full h-auto text-[#222933] lg:pl-12 4xl:pl-0 text-left">
                             <span>
-                                We achieve this by providing the highest standards of legal services to our Clients by putting them at the center of all we do; paying particular
-                                attention to the details of Clients’ business with the understanding that no two Clients are the same.
+                                At Kwame Akuffo, we take the Ghana Bar Association’s Code of Ethics as a baseline, not a limit. We don’t fold under pressure, compromise our values, or let anything stand between us and what’s right for our clients. We play clean, but we play to win.
                             </span>
                         </div>
 
@@ -93,7 +92,7 @@ const AboutTower = () => {
                             transition={{ duration: 0.6, delay: 1.4 }}
                         />
 
-                        <div className="absolute md:top-[70%] top-[73%] md:left-[38%] left-[10%] rsm:top-[70%] rsm:left-[20%]">
+                        <div className="absolute md:top-[70%] top-[73%] md:left-[38%] 4xl:left-[50%] left-[10%] rsm:top-[70%] rsm:left-[20%]">
                             <motion.img
                                 src={rotate}
                                 alt="Rotating integrity circle with text"
@@ -121,14 +120,14 @@ const AboutTower = () => {
                             loading="lazy"
                             className="absolute bottom-0 right-0 w-[254px] h-[236px] hidden md:block"
                         />
-                        <div className="py-4 px-8 md:h-[514px]">
+                        <div className="py-4 px-4 lg:px-8 4xl:px-32 md:h-[514px] lg:w-[732px] 4xl:w-[1032px]">
                             <motion.section
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 1.9 }}
                             >
-                                <h2 className="text-xl font-semibold text-[#7E1835] mb-4">Our Commitment To Ethical Standards</h2>
-                                <p className="text-gray-800 leading-relaxed mb-6">
+                                <h2 className="text-[16px] font-semibold text-[#7E1835] mb-4">Our Commitment To Ethical Standards</h2>
+                                <p className="text-gray-800 text-[14px] leading-relaxed mb-6">
                                     At Kwame Akuffo & Co, We Adhere To The Ghana Bar Association's Code Of Ethics. We Ensure That Our Actions And
                                     Decisions Do Not Compromise Our Independence, Integrity, Or Duty To Our Clients.
                                 </p>
@@ -140,8 +139,8 @@ const AboutTower = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 2.2 }}
                             >
-                                <h2 className="text-xl font-semibold text-[#7E1835] mb-4">Our Approach To Client Service</h2>
-                                <p className="text-gray-800 leading-relaxed mb-6">
+                                <h2 className="text-[16px] font-semibold text-[#7E1835] mb-4">Our Approach To Client Service</h2>
+                                <p className="text-gray-800 text-[14px] leading-relaxed mb-6">
                                     We Take The Time To Understand Our Clients' Unique Needs And Adapt To Their Changing Demands. We Provide
                                     Personalized Attention, Commercial Awareness, And Realistic Advice To Help Our Clients Achieve Their Goals.
                                 </p>
@@ -153,24 +152,24 @@ const AboutTower = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 2.5 }}
                             >
-                                <h2 className="text-xl font-semibold text-[#7E1835] mb-4">Our Commitment To Client Care</h2>
-                                <p className="text-gray-800 leading-relaxed mb-4">
+                                <h2 className="text-[16px] font-semibold text-[#7E1835] mb-4">Our Commitment To Client Care</h2>
+                                <p className="text-gray-800 text-[14px] leading-relaxed mb-4">
                                     We Are Dedicated To Providing Exceptional Client Service By:
                                 </p>
                                 <ul className="space-y-3 text-gray-800">
-                                    <li className="flex items-start">
+                                    <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
                                         <span>Carrying Out Client Instructions Diligently And Promptly.</span>
                                     </li>
-                                    <li className="flex items-start">
+                                    <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
                                         <span>Ensuring Clients Understand And Consent To Our Actions.</span>
                                     </li>
-                                    <li className="flex items-start">
+                                    <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
                                         <span>Keeping Clients Informed Of Progress And Changes In The Law.</span>
                                     </li>
-                                    <li className="flex items-start">
+                                    <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
                                         <span>Complying With Reasonable Requests For Information.</span>
                                     </li>

@@ -209,16 +209,16 @@ const MainTeam = () => {
 
                             {/* Main Headline */}
                             <motion.h1
-                                className="text-xl md:text-4xl md:leading-[54px] leading-[24px] text-gray-800 font-normal"
+                                className="text-xl md:text-4xl md:leading-[54px] leading-[24px] text-gray-800 font-normal font-garamond"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.7 }}
                                 viewport={{ once: true }}
                             >
-                                Our Dedicated Team Of <span className="text-[#7E1835] font-medium">Skilled Legal Professionals</span>{" "}
+                                Our Dedicated Team Of <span className="text-[#7E1835] font-medium font-garamond">Skilled Legal Professionals</span>{" "}
                                 Delivers Expert, Client-Focused Solutions With Unwavering{" "}
-                                <span className="text-[#7E1835] font-medium">Integrity, Clarity</span>, And{" "}
-                                <span className="text-[#7E1835] font-medium">Excellence</span>.
+                                <span className="text-[#7E1835] font-medium font-garamond">Integrity, Clarity</span>, And{" "}
+                                <span className="text-[#7E1835] font-medium font-garamond">Excellence</span>.
                             </motion.h1>
                         </motion.div>
                     </div>
