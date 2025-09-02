@@ -18,7 +18,7 @@ export default function TagsNavigation() {
             <div className="w-full border-b border-gray-200 bg-white">
                 <div className="flex items-center justify-between px-4 lg:px-12 4xl:px-32 py-4">
                     {/* Tags Navigation */}
-                    <nav className="flex items-center md:space-x-8 space-x-4 w-[300px] overflow-x-auto scrollbar-hide md:overflow-visible md:flex-nowrap">
+                    <nav className="flex items-center md:space-x-8 space-x-4 w-[300px]  md:mt-[80px] mt-0 lg:mt-0 overflow-x-auto scrollbar-hide md:overflow-visible md:flex-nowrap">
                         {tags.map((tag) => (
                             <button
                                 key={tag}

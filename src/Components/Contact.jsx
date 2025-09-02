@@ -38,53 +38,68 @@ export default function Contact() {
 
     return (
         <div className=" bg-white flex items-center justify-center py-8 px-4 lg:px-12 4xl:p-32">
-            <div className="flex flex-col md:flex-row overflow-hidden  w-full transform transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
+            <div className="flex flex-col lg:flex-row overflow-hidden  w-full transform transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
                 {/* Left Column - Contact Details */}
-                <div className="bg-rose-100 rounded-[5px] md:p-12 p-4 flex flex-col" style={{ width: "464px", height: "693px" }}>
+                <div className="bg-rose-100 rounded-[5px] md:p-12 p-4 flex flex-col lg:w-[464px] h-[693px]">
+                    {/* Header */}
                     <div className="mb-8">
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-2 h-2 bg-[#7E1835] rounded-full animate-pulse"></div>
-                            <span className="text-[#7E1835] text-sm font-medium tracking-wide">CONTACT DETAILS</span>
+                            <span className="text-[#7E1835] text-sm font-medium tracking-wide">
+                                CONTACT DETAILS
+                            </span>
                         </div>
-                        <h1 className="text-4xl font-serif text-gray-800 mb-8 animate-fade-in">Get In Touch</h1>
+                        <h1 className="text-4xl font-serif text-gray-800 mb-8 animate-fade-in">
+                            Get In Touch
+                        </h1>
                     </div>
 
-                    <div className="space-y-8 flex-1">
-                        <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                            <h3 className="text-[#7E1835] font-medium mb-4">Office Location:</h3>
-                            <div className="text-gray-800 space-y-1">
-                                <p>11 Patrice Lumumba Road</p>
-                                <p>Airport Residential Area, Accra</p>
-                                <p className="mt-3">Digital Address : GL-056-923</p>
+                    {/* Content - Mobile = stacked, md = grid 2 cols */}
+                    <div className="flex-1 space-y-8 md:space-y-0 md:grid md:grid-cols-2 md:gap-8">
+                        {/* Left side */}
+                        <div className="space-y-8">
+                            <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                                <h3 className="text-[#7E1835] font-medium mb-4">Office Location:</h3>
+                                <div className="text-gray-800 space-y-1">
+                                    <p>11 Patrice Lumumba Road</p>
+                                    <p>Airport Residential Area, Accra</p>
+                                    <p className="mt-3">Digital Address : GL-056-923</p>
+                                </div>
+                            </div>
+
+                            <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+                                <h3 className="text-[#7E1835] font-medium mb-4">Socials:</h3>
+                                <div className="flex gap-4">
+                                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transform transition-all duration-200 hover:scale-110 hover:shadow-md cursor-pointer">
+                                        <Facebook className="w-5 h-5 text-[#7E1835]" />
+                                    </div>
+                                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transform transition-all duration-200 hover:scale-110 hover:shadow-md cursor-pointer">
+                                        <Instagram className="w-5 h-5 text-[#7E1835]" />
+                                    </div>
+                                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transform transition-all duration-200 hover:scale-110 hover:shadow-md cursor-pointer">
+                                        <Twitter className="w-5 h-5 text-[#7E1835]" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                            <h3 className="text-[#7E1835] font-medium mb-4">Telephone:</h3>
-                            <p className="text-gray-800">(233) 303 966 645</p>
-                        </div>
+                        {/* Right side */}
+                        <div className="space-y-8">
+                            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                                <h3 className="text-[#7E1835] font-medium mb-4">Telephone:</h3>
+                                <p className="text-gray-800">(233) 303 966 645</p>
+                            </div>
 
-                        <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                            <h3 className="text-[#7E1835] font-medium mb-4">For General Enquires:</h3>
-                            <p className="text-gray-800">Kwame@Kbakuffo.Com</p>
-                        </div>
-
-                        <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                            <h3 className="text-[#7E1835] font-medium mb-4">Socials:</h3>
-                            <div className="flex gap-4">
-                                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transform transition-all duration-200 hover:scale-110 hover:shadow-md cursor-pointer">
-                                    <Facebook className="w-5 h-5 text-[#7E1835]" />
-                                </div>
-                                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transform transition-all duration-200 hover:scale-110 hover:shadow-md cursor-pointer">
-                                    <Instagram className="w-5 h-5 text-[#7E1835]" />
-                                </div>
-                                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transform transition-all duration-200 hover:scale-110 hover:shadow-md cursor-pointer">
-                                    <Twitter className="w-5 h-5 text-[#7E1835]" />
-                                </div>
+                            <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+                                <h3 className="text-[#7E1835] font-medium mb-4">
+                                    For General Enquires:
+                                </h3>
+                                <p className="text-gray-800">Kwame@Kbakuffo.Com</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 {/* Right Column - Contact Form */}
                 <div className="flex-1 bg-white md:pt-12 pt-8 md:px-8">

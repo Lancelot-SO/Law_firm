@@ -66,8 +66,8 @@ const AboutTower = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                     >
-                        <div className="py-4 w-full h-auto text-[#222933] lg:pl-12 4xl:pl-0 text-left">
-                            <span>
+                        <div className="py-4 w-full h-auto text-[#222933] lg:pl-12 md:pl-4 4xl:pl-0 text-left">
+                            <span className=''>
                                 At Kwame Akuffo, we take the Ghana Bar Association’s Code of Ethics as a baseline, not a limit. We don’t fold under pressure, compromise our values, or let anything stand between us and what’s right for our clients. We play clean, but we play to win.
                             </span>
                         </div>
@@ -76,7 +76,7 @@ const AboutTower = () => {
                             src={books}
                             alt="books"
                             loading="lazy"
-                            className="absolute md:top-36 md:right-0 right-4 w-[253px] h-auto"
+                            className="absolute lg:top-36 lg:right-0 md:right-44 md:top-40 right-4 w-[253px] h-auto"
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6, delay: 1.2 }}

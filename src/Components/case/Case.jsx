@@ -34,12 +34,12 @@ const Case = () => {
                 <motion.img
                     src={casebg}
                     alt="case background"
-                    className="h-full w-full object-cover"
+                    className="lg:h-full md:h-[722px] w-full object-cover"
                     variants={itemVariants}
                 />
 
                 <motion.div
-                    className="absolute top-[211px] left-12 4xl:left-32 w-[791px] h-[310px] flex flex-col justify-between"
+                    className="absolute top-[211px] left-12 4xl:left-32 md:w-[561px] lg:w-[791px] h-[310px] flex flex-col justify-between"
                     variants={itemVariants}
                 >
                     <span className="font-garamond font-normal leading-[70px] tracking-[-4%]">
@@ -93,7 +93,7 @@ const Case = () => {
                         </div>
                         <div className="flex flex-col text-white">
                             <span className="underline">Email Us:</span>
-                            <span>Kwame@kbakuffo.com</span>
+                            <span>info@kbakuffo.com</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -161,7 +161,7 @@ const Case = () => {
                             </div>
                             <div>
                                 <div className="underline text-xs">Email Us:</div>
-                                <div className="text-xs">Kwame@kbakuffo.com</div>
+                                <div className="text-xs">info@kbakuffo.com</div>
                             </div>
                         </div>
                     </motion.div>

@@ -52,17 +52,17 @@ const PracticalArea = () => {
                 <motion.img
                     src={practicalbg}
                     alt="case background"
-                    className="h-full w-full object-cover"
+                    className="lg:h-full md:h-[722px] w-full object-cover"
                     variants={itemVariants}
                 />
 
                 <motion.div
-                    className="absolute top-[211px] left-12 4xl:left-32 w-[791px] h-[310px] flex flex-col justify-between"
+                    className="absolute top-[211px] left-12 4xl:left-32 md:[561px] lg:w-[791px] h-[310px] flex flex-col justify-between"
                     variants={itemVariants}
                 >
                     <span className="font-garamond font-normal leading-[70px] tracking-[-4%]">
                         <motion.span
-                            className="font-garamond font-semibold leading-[70px] tracking-[-4%] text-[102px] text-[#7E1835]"
+                            className="font-garamond font-semibold lg:leading-[70px] md:leading-[50px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
                             C
@@ -111,7 +111,7 @@ const PracticalArea = () => {
                         </div>
                         <div className="flex flex-col text-white">
                             <span className="underline">Email Us:</span>
-                            <span>Kwame@kbakuffo.com</span>
+                            <span>info@kbakuffo.com</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -179,7 +179,7 @@ const PracticalArea = () => {
                             </div>
                             <div>
                                 <div className="underline text-xs">Email Us:</div>
-                                <div className="text-xs">Kwame@kbakuffo.com</div>
+                                <div className="text-xs">info@kbakuffo.com</div>
                             </div>
                         </div>
                     </motion.div>
@@ -188,8 +188,8 @@ const PracticalArea = () => {
 
             <section className="relative px-4 lg:px-12 4xl:px-32 py-16 lg:py-24">
                 <div className="">
-                    <div className="flex flex-col lg:flex-row gap-16  items-center">
-                        <div className="flex lg:items-center flex-col lg:flex-row lg:gap-20 gap-8">
+                    <div className="flex flex-col md:flex-row gap-16 items-center">
+                        <div className="flex lg:items-center flex-col md:flex-row lg:gap-20 gap-8">
                             <div className="flex items-center">
                                 <span className="mr-3 h-2 w-2 rounded-full bg-[#7E1835]" />
                                 <span className="text-sm font-garamond font-medium uppercase tracking-wider text-[#7E1835]">
@@ -204,7 +204,7 @@ const PracticalArea = () => {
                                 />
                             </div>
                         </div>
-                        <div className="text-gray-600 lg:w-[800px]">
+                        <div className="text-gray-600 md:w-[400px] lg:w-[800px]">
                             <h1 className="text-[20px] lg:text-[32px] font-bold font-garamond md:leading-[48px] leading-[24px] mb-8 w-full">
                                 Whether you're navigating regulatory frameworks, resolving disputes, or entering into strategic partnerships, our team is equipped to guide you every step of the way.
                             </h1>

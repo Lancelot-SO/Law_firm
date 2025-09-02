@@ -53,12 +53,12 @@ export default function CaseBlogDetails() {
                 <motion.img
                     src={casebg}
                     alt="case background"
-                    className="h-full w-full object-cover"
+                    className="lg:h-full md:h-[772px] w-full object-cover"
                     variants={itemVariants}
                 />
 
                 <motion.div
-                    className="absolute top-[211px] left-12 4xl:left-32 w-[791px] h-[310px] flex flex-col justify-between"
+                    className="absolute top-[211px] left-12 4xl:left-32 md:w-[561px] lg:w-[791px] h-[310px] flex flex-col justify-between"
                     variants={itemVariants}
                 >
                     <span className="font-garamond font-normal leading-[70px] tracking-[-4%]">
@@ -230,7 +230,7 @@ export default function CaseBlogDetails() {
                 {/* Right: Sidebar */}
                 <aside className="lg:col-span-1 space-y-8">
                     {/* Newsletter */}
-                    <div className="border p-6 rounded-lg shadow-sm">
+                    <div className="border p-6 shadow-sm">
                         <h3 className="text-lg font-semibold text-[#7E1835] mb-4">
                             Newsletter
                         </h3>
@@ -267,7 +267,7 @@ export default function CaseBlogDetails() {
                                         <img
                                             src={item.image}
                                             alt={item.title}
-                                            className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-500"
+                                            className="w-full h-40 md:h-[300px] lg:h-52 object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
 
                                         {/* Overlay */}

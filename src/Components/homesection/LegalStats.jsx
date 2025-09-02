@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { BookOpen, Gavel, Scale, Users } from 'lucide-react'
+import PropTypes from 'prop-types'
 
 const stats = [
     {
@@ -9,7 +10,7 @@ const stats = [
         titleNumber: '600+',
         titleRest: 'Consultations',
         description:
-            "Over 600 people have trusted us for legal clarity when it mattered most. One conversation can change everything, and we've had hundreds that have.",
+            "From private individuals to multinational clients, we’ve provided strategic legal guidance tailored to each case, each goal, and each unique legal challenge.",
         icon: Scale,
         cardClass: 'bg-rose-50',
         accentClass: 'text-[#7f1326]',
@@ -21,7 +22,7 @@ const stats = [
         titleNumber: '50+',
         titleRest: 'Cases Won',
         description:
-            "We don’t just take cases; we close them with confidence. With 50+ wins under our belt, we know what it takes to deliver results that matter.",
+            "We’ve successfully led litigation in matters that demanded sharp advocacy, courtroom strength, and a deep understanding of law at its most complex.",
         icon: BookOpen,
         cardClass: 'bg-white',
         accentClass: 'text-[#7f1326]',
@@ -33,7 +34,7 @@ const stats = [
         titleNumber: '20+',
         titleRest: 'Years Of Experience',
         description:
-            "For over two decades, we’ve stood at the intersection of law and strategy. That’s 20+ years of navigating complexity and coming out on top.",
+            "Our partners bring decades of combined legal experience, offering clients a rare blend of institutional memory and forward-thinking legal strategy.",
         icon: Scale,
         cardClass: 'bg-amber-50',
         accentClass: 'text-[#7f1326]',
@@ -45,7 +46,7 @@ const stats = [
         titleNumber: '98%',
         titleRest: 'Client Satisfaction',
         description:
-            "Our clients walk away satisfied, and many come back or refer others. It’s not just what we win; it’s how we work that earns trust.",
+            "Clients choose us—and return—because we listen, communicate clearly, act decisively, and deliver legal outcomes that hold up to scrutiny.",
         icon: Users,
         cardClass: 'bg-white',
         accentClass: 'text-[#7f1326]',
@@ -54,10 +55,10 @@ const stats = [
     {
         id: 5,
         eyebrow: '5',
-        titleNumber: '5+',
+        titleNumber: '3',
         titleRest: 'Top-Ranked Partners',
         description:
-            "Behind every case is a powerhouse team. With 20+ partners ranked among the best, we bring brains, boldness, and experience that get things done.",
+            "Our leadership team includes some of Ghana’s most respected legal minds, known for their insight, professionalism, and contribution to the legal profession.",
         icon: Gavel,
         cardClass: 'bg-emerald-50',
         accentClass: 'text-[#7f1326]',
@@ -65,16 +66,13 @@ const stats = [
     },
 ]
 
-const CARD_HEIGHT = 'h-[458px]'
-const MOBILE_HEIGHT = 'h-[250px]'
-
-import PropTypes from 'prop-types'
-
-function StatCard({ stat }) {
+function StatCard({ stat, className }) {
     const Icon = stat.icon
     return (
         <div
-            className={`relative overflow-hidden shadow-sm p-6 border-none ${CARD_HEIGHT} ${stat.cardClass}`}
+            className={`relative overflow-hidden shadow-sm p-6 border-none 
+                        h-[350px] md:h-[350px] lg:h-[458px] 
+                        ${stat.cardClass} ${className || ''}`}
         >
             {/* Index number */}
             <div className="text-[32px] font-semibold text-[#7E1835]/30">{stat.eyebrow}</div>
@@ -82,16 +80,18 @@ function StatCard({ stat }) {
             {/* Decorative icon */}
             <Icon
                 aria-hidden="true"
-                className={`pointer-events-none absolute top-4 right-4 h-40 w-40 sm:h-44 sm:w-44 opacity-60 ${stat.iconTintClass}`}
+                className={`pointer-events-none absolute top-4 right-4 h-28 w-28 md:h-32 md:w-32 lg:h-44 lg:w-44 opacity-60 ${stat.iconTintClass}`}
             />
 
             {/* Content */}
-            <div className="mt-48 space-y-3 md:mt-60">
+            <div className="mt-28 md:mt-32 lg:mt-60 space-y-3">
                 <h3 className="text-2xl">
                     <span className={`mr-2 text-3xl font-bold font-garamond ${stat.accentClass}`}>
                         {stat.titleNumber}
                     </span>
-                    <span className="text-[#7E1835] text-[20px] font-bold font-garamond">{stat.titleRest}</span>
+                    <span className="text-[#7E1835] text-[20px] font-bold font-garamond">
+                        {stat.titleRest}
+                    </span>
                 </h3>
                 <p className="max-w-prose font-outfit text-sm leading-6 text-zinc-600">
                     {stat.description}
@@ -113,27 +113,47 @@ StatCard.propTypes = {
         accentClass: PropTypes.string.isRequired,
         iconTintClass: PropTypes.string.isRequired,
     }).isRequired,
+    className: PropTypes.string,
 }
 
-export default function LegalStats() {
+function LegalStatsMd() {
     return (
-        <section
-            aria-label="Firm statistics"
-            className="relative w-full "
-        >
+        <section aria-label="Firm statistics" className="relative w-full hidden md:block lg:hidden">
             <div className="absolute inset-0" />
             <div className="absolute inset-0 " />
 
-            <div className="relative mx-auto py-16 px-2 md:py-20 mr-4 lg:mr-10 4xl:mr-32">
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                    {/* placeholder for alignment on md+ */}
-                    <div className="hidden md:block" aria-hidden="true">
-                        <div className={`${MOBILE_HEIGHT} md:${CARD_HEIGHT}`} />
-                    </div>
-
+            <div className="relative mx-auto py-16 px-2 lg:py-20 mr-4 lg:mr-10 4xl:mr-32">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <StatCard stat={stats[0]} />
                     <StatCard stat={stats[1]} />
+                    <StatCard stat={stats[2]} />
+                    <StatCard stat={stats[3]} />
+                    {/* Last card spans 2 cols on md for center alignment */}
+                    <StatCard stat={stats[4]} className="md:col-span-1 md:mx-auto" />
+                </div>
+            </div>
+        </section>
+    )
+}
 
+// Height constants for placeholder div
+const MOBILE_HEIGHT = "h-[250px]";
+const CARD_HEIGHT = "h-[458px]";
+const TABLET_HEIGHT = "h-[350px]";
+
+function LegalStatsLg() {
+    return (
+        <section aria-label="Firm statistics" className="relative w-full md:hidden lg:block" >
+            <div className="absolute inset-0" />
+            <div className="absolute inset-0 " />
+            <div className="relative mx-auto py-16 px-2 lg:py-20 mr-4 lg:mr-10 4xl:mr-32">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                    {/* placeholder for alignment on md+ */}
+                    <div className="hidden lg:block" aria-hidden="true">
+                        <div className={`${MOBILE_HEIGHT} lg:${CARD_HEIGHT} md:${TABLET_HEIGHT}`} />
+                    </div>
+                    <StatCard stat={stats[0]} />
+                    <StatCard stat={stats[1]} />
                     <StatCard stat={stats[2]} />
                     <StatCard stat={stats[3]} />
                     <StatCard stat={stats[4]} />
@@ -141,4 +161,13 @@ export default function LegalStats() {
             </div>
         </section>
     )
+}
+
+export default function LegalStats() {
+    return (
+        <>
+            <LegalStatsMd />
+            <LegalStatsLg />
+        </>
+    );
 }

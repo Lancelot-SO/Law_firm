@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { CheckCircle2, Award } from 'lucide-react';
@@ -28,7 +29,7 @@ export default function AboutPage() {
     };
 
     return (
-        <main className="h-[1520px] lg:h-[824px] 4xl:h-[800px] bg-white">
+        <main className="h-[1520px] md:h-[1300px] lg:h-[824px] 4xl:h-[800px] bg-white">
             <section className="mx-auto w-full px-4 lg:px-0 py-8 md:py-12">
                 {/* Label and Heading */}
                 <div className="mb-8">
@@ -54,7 +55,7 @@ export default function AboutPage() {
                             variants={fadeInUp}
                             className="text-center font-garamond text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#7E1835]"
                         >
-                            About Kwame Akuffo & Co.
+                            Our Story Starts With Yours
                         </motion.h1>
 
                         <div aria-hidden="true" />
@@ -73,11 +74,11 @@ export default function AboutPage() {
                 </div>
 
                 {/* Content Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 lg:px-10 4xl:px-32">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 px-4 lg:px-10 4xl:px-32">
                     {/* Left Image Column */}
                     <div className="relative md:col-span-4 flex ">
                         <motion.div
-                            className="relative overflow-hidden w-full max-w-[374px] aspect-[374/543]"
+                            className="relative overflow-hidden w-full h-full max-w-[374px] aspect-[374/543]"
                             initial={{ opacity: 0, scale: prefersReducedMotion ? 1 : 0.98 }}
                             whileInView={{
                                 opacity: 1,
@@ -105,11 +106,11 @@ export default function AboutPage() {
                         >
                             {/* Paragraphs */}
                             {[
-                                `At Kwame Akuffo & Co, we take time to understand our clients by constantly changing and adapting to new demands and business trends. We make a conscious effort to understand what clients need today and better prepare them for tomorrow. We achieve this by providing the highest standards of legal services, putting clients at the center of all we do, and paying particular attention to the details of each business.`,
-                                `We place emphasis on consulting and advising clients with a commercial but realistic approach. Above all, our culture and the standard of work we provide are driven by our business ethos: quality with clarity, unity, and integrity.`,
-                                `Our vision is to provide more than law through our business principles of quality with care, unity, and integrity.`,
-                                `More Than Law is intricately woven into the fabric of our culture and personality, whether among ourselves or when working with third parties. It is clear in how we work and what we stand for.`,
-                                `Kwame Akuffo & Co is an indigenous law firm with a clear vision for the future.`,
+                                `We’re a client-focused law firm dedicated to sharp insight and unwavering representation. Think of us as your strategists, your advocates, and the team that’s always three steps ahead. We handle the complexity so you can focus on what’s next, protecting your interests with clarity and conviction.`,
+                                `Let's be honest, nobody wakes up hoping they need to call a lawyer. The legal world can feel formal, complicated, and more than a little stressful. We founded Kwame Akuffo & Co. Unlimited in 2016 to be the exact opposite of that. We're a firm built on the belief that powerful legal representation doesn't need to be stuffy. Since day one, our goal has been simple: to be the sharp, dedicated, and surprisingly human legal team you can actually talk to.`,
+                                `Over the years, we’ve advised leading corporations, institutions, and individuals on matters that shaped industries and defended rights. From high-stakes litigation to complex transactions, we’ve proven that law done right is about preparation, precision, and people. That’s why clients don’t just hire us once—they stay, they return, and they trust us to stand with them in every chapter of their journey.`,
+
+
                             ].map((text, i) => (
                                 <motion.p key={i} variants={fadeInUp}>
                                     {text}

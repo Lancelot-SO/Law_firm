@@ -13,7 +13,8 @@ import Partners from '../Components/aboutsection/Partners'
 
 const About = () => {
     return (
-        <div><AboutHero />
+        <div>
+            <AboutHero />
             <AboutBio />
             <NextAbout />
             <Circles />

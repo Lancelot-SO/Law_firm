@@ -41,26 +41,26 @@ const Hero = () => {
                 <motion.img
                     src={herobg}
                     alt="hero background"
-                    className="h-full w-full object-cover"
+                    className="lg:h-full md:h-[722px] w-full object-cover"
                     variants={itemVariants}
                 />
 
                 <motion.div
-                    className="absolute top-[211px] left-12 4xl:left-32 w-[800px] h-[310px] flex flex-col justify-between"
+                    className="absolute top-[211px] left-12 4xl:left-32 md:w-[561px] lg:w-[800px] md:h-[157px] lg:h-[310px] flex flex-col justify-between"
                     variants={itemVariants}
                 >
-                    <span className="font-garamond font-normal leading-[70px] tracking-[-4%]">
+                    <span className="font-garamond font-normal lg:leading-[70px] md:leading-[50px] tracking-[-4%]">
                         <motion.span
                             className="font-garamond font-semibold leading-[70px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
-                            E
+                            L
                         </motion.span>
                         <motion.span
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            xpert Law with Local Insights for Results that Matter.
+                            egal Matters. Peace of Mind Matters More.
                         </motion.span>
                     </span>
 
@@ -68,15 +68,13 @@ const Hero = () => {
                         className="w-[535px] text-[12px] leading-5 font-normal text-white"
                         variants={itemVariants}
                     >
-                        When the stakes are high, you need more than a lawyer. You need a strategist. We combine
-                        sharp legal expertise with deep local insight to protect what matters most: your business,
-                        your reputation, and your future.
+                        Whether you’re launching a business, facing a dispute, or making a landmark deal, legal questions can feel heavy. Our job is simple: to lift that weight.
                     </motion.span>
 
                     <motion.div variants={itemVariants}>
                         <Link
                             to="/practice-area"
-                            className="bg-[#7E1835] text-white w-[122px] h-[39px] flex items-center justify-center text-[10px] font-bold leading-[15px] tracking-[1%]"
+                            className="bg-[#7E1835] text-white w-[122px] h-[39px] flex items-center justify-center text-[10px] font-bold leading-[15px] tracking-[1%] md:mt-4 lg:mt-0"
                         >
                             Practice Area
                         </Link>
@@ -103,7 +101,7 @@ const Hero = () => {
                         </div>
                         <div className="flex flex-col text-white">
                             <span className="underline">Email Us:</span>
-                            <span>Kwame@kbakuffo.com</span>
+                            <span>info@kbakuffo.com</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -131,18 +129,16 @@ const Hero = () => {
                         variants={itemVariants}
                     >
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
-                            E
+                            L
                         </span>
-                        <span> xpert Law with Local Insights for Results that Matter.</span>
+                        <span> egal Matters. Peace of Mind Matters More.</span>
                     </motion.h1>
 
                     <motion.p
                         className="text-white text-sm sm:text-base leading-relaxed"
                         variants={itemVariants}
                     >
-                        When the stakes are high, you need more than a lawyer. You need a strategist. We combine
-                        sharp legal expertise with deep local insight to protect what matters most: your business,
-                        your reputation, and your future.
+                        Whether you’re launching a business, facing a dispute, or making a landmark deal, legal questions can feel heavy. Our job is simple: to lift that weight.
                     </motion.p>
 
                     <motion.div variants={itemVariants}>
@@ -174,7 +170,7 @@ const Hero = () => {
                             </div>
                             <div>
                                 <div className="underline text-xs">Email Us:</div>
-                                <div className="text-xs">Kwame@kbakuffo.com</div>
+                                <div className="text-xs">info@kbakuffo.com</div>
                             </div>
                         </div>
                     </motion.div>

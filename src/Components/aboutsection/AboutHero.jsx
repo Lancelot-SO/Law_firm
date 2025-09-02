@@ -35,7 +35,7 @@ const AboutHero = () => {
                 <motion.img
                     src={aboutbg}
                     alt="hero background"
-                    className="h-full w-full object-cover"
+                    className="h-full md:h-[722px] w-full object-cover"
                     variants={itemVariants}
                 />
 
@@ -96,7 +96,7 @@ const AboutHero = () => {
                         </div>
                         <div className="flex flex-col text-white">
                             <span className="underline">Email Us:</span>
-                            <span>Kwame@kbakuffo.com</span>
+                            <span>info@kbakuffo.com</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -166,7 +166,7 @@ const AboutHero = () => {
                             </div>
                             <div>
                                 <div className="underline text-xs">Email Us:</div>
-                                <div className="text-xs">Kwame@kbakuffo.com</div>
+                                <div className="text-xs">info@kbakuffo.com</div>
                             </div>
                         </div>
                     </motion.div>

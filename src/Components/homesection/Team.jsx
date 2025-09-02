@@ -9,49 +9,52 @@ export default function Team() {
     const attorneys = [
         {
             name: "Kwame Boafo Akuffo",
+            email: "Kwame@kbakuffo.com",
             title: "PARTNER",
             image: "/smiling-black-professional.png",
-            education:
-                "Kwame Was Educated At Achimota School, The University Of Ghana's Faculty Of Law, And Was Admitted To The Ghana School Of Law. He Holds A Master's Degree In Law, Specialising In International Finance And Commercial Law, From King's College London.",
-            admitted:
-                "Kwame Worked With The Law Firm Of Akufo-Addo, Prempeh & Co. For 18 Years. Established In 1979, Akufo-Addo, Prempeh & Co. Is One Of Ghana's Largest Law Firms And Has Grown Into A Leading Law Firm.",
-            experience:
-                "At Material Times, The Firm Maintained A Broadly Based Practice, Offering A Full Range Of Quality Legal Services. The Firm Represented Numerous International Companies And Was Instructed By Leading Law Firms In America And Europe To Act On Behalf Of International Companies And Corporations.",
-            practice:
-                "Kwame Has Extensive Experience In Commercial Litigation And Associated Transactions. Additionally, He Has A Keen Interest In Constitutional Law And Was A Member Of The Celebrated Election Petition Team That Represented His Excellency Nana Akufo-Addo, President Of The Republic Of Ghana, In The 2013 Election Petition Litigation.",
+            background: `Kwame Boafo Akuffo was called to the Ghana Bar in October 1998. He spent 18 years with the prestigious firm of Akufo-Addo, Prempeh & Co., one of Ghana’s foremost legal chambers known for its full-service offering and international reputation. During his tenure, he was involved in major litigation and advisory matters, working with global law firms and representing international clients. He was also part of the distinguished legal team that represented H.E. Nana Akufo-Addo in the landmark 2013 Presidential Election Petition case.`,
+            education: `Kwame is an alumnus of Achimota School and studied law at the University of Ghana and the Ghana School of Law. He holds a Master of Laws (LL.M) in International Finance and Commercial Law from King’s College London. His education and global exposure position him as a thought leader in the evolving legal and regulatory landscape.`,
+            practice: `Kwame’s core areas of expertise include commercial litigation, constitutional law, and transactional advisory. He is known for his courtroom precision, deep legal insight, and strategic thinking in high-stakes disputes and commercial negotiations. His practice spans financial institutions, corporate clients, public figures, and cross-border entities.`,
+            socials: {
+                facebook: "https://www.facebook.com/kwame.akuffo1?mibextid=wwXIfr&rdid=pMfoHkbhysjuAwgF#",
+                instagram: "https://www.instagram.com/kwameboafoakuffo_official?igsh=cGNicjJ3ODVmdmVq",
+                twitter: "https://x.com/thecourtbruiser?s=21",
+            },
         },
         {
             name: "Audrey Twum",
+            email: "audrey@kbakuffo.com",
             title: "PARTNER",
             image: "/professional-woman-teal-blazer.png",
-            education:
-                "Audrey graduated from the University of Ghana School of Law and was called to the Ghana Bar. She holds an LLM in International Commercial Law from University College London.",
-            admitted:
-                "Audrey has been practicing law for over 15 years, specializing in corporate law and international transactions.",
-            experience:
-                "She has extensive experience in mergers and acquisitions, corporate governance, and regulatory compliance across various industries.",
-            practice:
-                "Audrey focuses on corporate law, securities regulation, and cross-border transactions. She has advised numerous multinational corporations on their operations in Ghana and West Africa.",
+            background: `Audrey Twum brings over two decades of legal experience across both the UK and Ghana. She was called to the English Bar by the Honourable Society of Gray’s Inn in 2000 and to the Ghana Bar in 2009. Trained in London, Audrey has worked extensively in secured lending, property finance, and commercial property law. She joined Kwame Akuffo & Co. Unlimited in 2019, bringing with her a strong foundation in transactional work, corporate advisory, and civil litigation.`,
+            education: `Audrey is an alumna of Achimota School and earned her LL.B (Hons) from the University of Wolverhampton. She pursued her legal training at the Inns of Court Law School, City University London, and later completed an LL.M in International Transport and Maritime Law at London Metropolitan University. She is currently advancing her expertise through a Postgraduate Diploma in Governance, Risk, and Compliance.`,
+            practice: `Audrey’s practice spans real estate development, commercial transactions, and corporate structuring. She is highly skilled in drafting shareholder agreements, interpreting contracts, conducting legal due diligence, and advising financial institutions on their loan portfolios. Known for her meticulous approach and strong legal reasoning, Audrey plays a central role in the firm’s transactional and advisory practice.`,
+            socials: {
+                facebook: "https://facebook.com/audreytwum",
+                instagram: "https://instagram.com/audreytwum",
+                twitter: "https://twitter.com/audreytwum",
+            },
         },
         {
             name: "Yvonne Akuffo-Addo",
+            email: "yvonne@kbakuffo.com",
             title: "PARTNER",
             image: "/professional-woman-blazer-pearls.png",
-            education:
-                "Yvonne obtained her law degree from the University of Ghana and was admitted to the Ghana Bar. She later earned an LLM in International Law from Harvard Law School.",
-            admitted:
-                "Yvonne has been practicing law for over 12 years, with a focus on international arbitration and dispute resolution.",
-            experience:
-                "She has represented clients in complex commercial disputes and has extensive experience in alternative dispute resolution mechanisms.",
-            practice:
-                "Yvonne specializes in international arbitration, commercial litigation, and dispute resolution. She has handled cases before various international arbitration tribunals and courts.",
+            background: `Yvonne Akuffo-Addo was called to the Ghana Bar in October 2010 and began her legal career at Kuenyehia & Nutsukpui Legal Practitioners & Notaries. There, she gained extensive experience in litigation and negotiation across multiple areas of practice. Over a seven-year period, she worked on cases involving labour law, intellectual property, family law, tax, and arbitration - shaping her into a well-rounded and versatile practitioner. She currently serves as Secretary to the Ghana Bar Association’s Women and Minor Rights Committee.`,
+            education: `Yvonne is a graduate of Akosombo International School and holds two first degrees: a Bachelor of Science in Biological Sciences from the University of Cape Coast, and a Bachelor of Laws from the University of Ghana. She obtained her Postgraduate Diploma in Law from the Ghana School of Law and is a member of both the Ghana Bar Association and the International Bar Association.`,
+            practice: `Yvonne’s practice spans employment law, family law, corporate and commercial litigation, and intellectual property. She brings strong advocacy and negotiation skills to every matter, whether advising clients on sensitive personal issues or representing businesses in high-stakes disputes. Her cross-disciplinary background and leadership within the legal community reflect her commitment to both the profession and the people it serves.`,
+            socials: {
+                facebook: "https://facebook.com/yvonneakuffoaddo",
+                instagram: "https://instagram.com/yvonneakuffoaddo",
+                twitter: "https://twitter.com/yvonneakuffoaddo",
+            },
         },
     ];
 
     const openModal = (index) => setSelectedAttorney(index);
     const closeModal = () => setSelectedAttorney(null);
 
-    // ===== Animations (initial load + stagger) =====
+    // ===== Animations =====
     const page = {
         hidden: { opacity: 0 },
         show: {
@@ -80,18 +83,18 @@ export default function Team() {
                 <div className="mx-auto lg:px-12 4xl:px-32">
                     {/* Header */}
                     <motion.div className="mb-12 text-center" variants={fadeUp}>
-                        <h2 className="text-2xl md:text-4xl font-garamond text-[#7E1835] leading-tight">
-                            Our Experienced Attorney Are Ready
+                        <h2 className="text-2xl md:text-4xl font-bold font-garamond text-[#7E1835] leading-tight">
+                            Our Experienced Attorneys Are Ready
                             <br />
-                            To answer any questions
+                            To Answer Any Questions
                         </h2>
                     </motion.div>
 
                     {/* Attorney Grid */}
-                    <div className="mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div className="mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {attorneys.map((attorney, index) => (
                             <motion.div key={index} className="group" variants={card}>
-                                {/* Image Container (hover animation) */}
+                                {/* Image Container */}
                                 <motion.div
                                     className="relative mb-4 overflow-hidden rounded-lg bg-gray-200"
                                     whileHover={{ scale: 1.02, rotate: -0.25, y: -2 }}
@@ -175,18 +178,18 @@ export default function Team() {
                                 </motion.button>
                             </motion.div>
 
-                            {/* Content (already responsive from your version) */}
-                            <div className="flex h-[calc(100%-80px)] flex-col md:flex-row overflow-y-auto md:overflow-hidden">
+                            {/* Content */}
+                            <div className="flex h-[calc(100%-80px)] flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
                                 {/* Left side - Image */}
                                 <motion.div
-                                    className="w-full md:w-2/5 p-4 md:p-6 md:pb-6"
+                                    className="w-full lg:w-2/5 p-4 lg:p-6 lg:pb-6"
                                     initial={{ opacity: 0, x: -50, scale: 0.9 }}
                                     animate={{ opacity: 1, x: 0, scale: 1 }}
                                     exit={{ opacity: 0, x: -50, scale: 0.9 }}
                                     transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                                 >
                                     <motion.div
-                                        className="h-64 md:h-full overflow-hidden rounded-lg bg-gray-200"
+                                        className="h-64 md:h-[400px] lg:h-full overflow-hidden rounded-lg bg-gray-200"
                                         whileHover={{ scale: 1.02 }}
                                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                     >
@@ -195,7 +198,7 @@ export default function Team() {
                                             alt={attorneys[selectedAttorney].name}
                                             width={400}
                                             height={600}
-                                            className="h-full w-full object-cover"
+                                            className="h-full md:h-full w-full object-cover"
                                             loading="lazy"
                                         />
                                     </motion.div>
@@ -203,7 +206,7 @@ export default function Team() {
 
                                 {/* Right side - Content */}
                                 <motion.div
-                                    className="w-full md:w-3/5 p-4 md:p-6"
+                                    className="w-full lg:w-3/5 p-4 md:p-6"
                                     initial={{ opacity: 0, x: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: 50 }}
@@ -227,36 +230,54 @@ export default function Team() {
                                                 animate={{ opacity: 1, scale: 1 }}
                                                 transition={{ delay: 1.1, duration: 0.4 }}
                                             >
-                                                {[Facebook, Instagram, Twitter].map((Icon, index) => (
-                                                    <motion.div
-                                                        key={index}
-                                                        whileHover={{ scale: 1.3, y: -5, rotate: [0, -10, 10, 0] }}
-                                                        whileTap={{ scale: 0.9 }}
-                                                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                                    >
-                                                        <Icon className="h-5 w-5 cursor-pointer text-[#7E1835]" />
-                                                    </motion.div>
-                                                ))}
+                                                {Object.entries(attorneys[selectedAttorney].socials).map(([platform, url], index) => {
+                                                    if (!url) return null;
+                                                    const Icon =
+                                                        platform === "facebook"
+                                                            ? Facebook
+                                                            : platform === "instagram"
+                                                                ? Instagram
+                                                                : Twitter;
+                                                    return (
+                                                        <motion.a
+                                                            key={index}
+                                                            href={url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            whileHover={{ scale: 1.3, y: -5, rotate: [0, -10, 10, 0] }}
+                                                            whileTap={{ scale: 0.9 }}
+                                                            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                                        >
+                                                            <Icon className="h-5 w-5 cursor-pointer text-[#7E1835]" />
+                                                        </motion.a>
+                                                    );
+                                                })}
                                             </motion.div>
                                         </div>
 
                                         <h2 className="mb-4 font-serif text-3xl text-gray-900">
                                             {attorneys[selectedAttorney].name}
                                         </h2>
+                                        <span>
+                                            Email:{" "}
+                                            <a
+                                                className="text-[#7E1835] hover:underline"
+                                                href={`mailto:${attorneys[selectedAttorney].email}`}
+                                            >
+                                                {attorneys[selectedAttorney].email}
+                                            </a>
+                                        </span>
                                     </motion.div>
 
                                     {/* Content Sections */}
                                     {[
-                                        { title: "EDUCATION", content: attorneys[selectedAttorney].education },
-                                        {
-                                            title: "Admitted To The Ghana Bar In October 1998",
-                                            content: `${attorneys[selectedAttorney].admitted} ${attorneys[selectedAttorney].experience}`,
-                                        },
-                                        { title: "Practice", content: attorneys[selectedAttorney].practice },
+                                        { title: "Professional Background", content: attorneys[selectedAttorney].background },
+                                        { title: "Education & Affiliations", content: attorneys[selectedAttorney].education },
+                                        { title: "Practice Focus", content: attorneys[selectedAttorney].practice },
                                     ].map((section, index) => (
                                         <motion.div
                                             key={section.title}
-                                            className="mb-8"
+                                            className="mb-4"
                                             initial={{ opacity: 0, x: 30, rotateX: -15 }}
                                             animate={{ opacity: 1, x: 0, rotateX: 0 }}
                                             exit={{ opacity: 0, x: 30 }}

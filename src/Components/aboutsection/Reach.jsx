@@ -5,10 +5,10 @@ import books from "../../assets/about/books2.png"
 export default function Reach() {
     return (
         <div className=" bg-[#ECDCE1]">
-            <div className="flex flex-col md:flex-row px-4 lg:px-12 4xl:px-32 pt-4 md:pt-0">
+            <div className="flex flex-col lg:flex-row px-4 lg:px-12 4xl:px-32 pt-4 lg:pt-0">
                 {/* Left side - Image */}
                 <motion.div
-                    className="md:w-2/5 relative flex items-center"
+                    className="lg:w-2/5 relative flex items-center"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -24,7 +24,7 @@ export default function Reach() {
 
                 {/* Right side - Content */}
                 <motion.div
-                    className="md:w-3/5 flex flex-col justify-center md:px-12 py-16"
+                    className="lg:w-3/5 flex flex-col justify-center lg:px-12 py-16"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}

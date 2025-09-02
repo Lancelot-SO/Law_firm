@@ -21,7 +21,7 @@ export default function Navbar() {
         <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between h-20 px-4 lg:px-10 4xl:px-32 backdrop-blur-md bg-[#2C2C2C]/80 text-[#F5F5DC]">
             {/* ─── Mobile logo & hamburger ───────────────────────────── */}
             <NavLink to="/" className="flex items-center gap-2 lg:hidden">
-                <img src={logo} alt="KA Logo" className="h-10 w-auto object-cover" />
+                <img src={logo} alt="KA Logo" className="h-[54px] w-[94px] object-cover" />
             </NavLink>
             <button
                 onClick={toggleMenu}
