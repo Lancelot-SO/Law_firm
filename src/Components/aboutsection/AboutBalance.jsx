@@ -30,7 +30,7 @@ export default function AboutBalance() {
                     viewport={{ once: true }}
                     className="mb-8"
                 >
-                    <span className="text-sm font-medium text-[#7E1835] tracking-wider">● DUTIES</span>
+                    <span className="text-sm font-playfair font-medium text-[#7E1835] tracking-wider">● DUTIES</span>
                 </motion.div>
 
                 {/* Main heading */}
@@ -41,8 +41,8 @@ export default function AboutBalance() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h1 className="text-3xl md:text-5xl font-light text-gray-900">
-                        Our <span className="text-[#7E1835]">Fiduciary</span> Duties
+                    <h1 className="text-3xl md:text-5xl font-garamond font-bold text-gray-900">
+                        Our <span className="text-[#7E1835] font-garamond font-bold">Fiduciary</span> Duties
                     </h1>
                 </motion.div>
 
@@ -60,7 +60,7 @@ export default function AboutBalance() {
                             {/* Icon */}
                             <Scale className="w-[120px] h-[120px]" />
                         </div>
-                        <h2 className="text-xl font-medium text-[#7E1835] lg:w-[288px] w-full mb-6 leading-tight relative z-10">
+                        <h2 className="text-xl font-garamond font-medium text-[#7E1835] lg:w-[288px] w-full mb-6 leading-tight relative z-10">
                             Fierce Advocacy. Unwavering Integrity.
                         </h2>
                         <p className="text-gray-700 text-sm leading-relaxed relative z-10">
@@ -74,7 +74,7 @@ export default function AboutBalance() {
                             {/* Icon */}
                             <BookOpen className="w-[120px] h-[120px]" />
                         </div>
-                        <h2 className="text-xl font-medium text-[#7E1835] lg:w-[288px] w-full mb-6 leading-tight relative z-10">
+                        <h2 className="text-xl font-garamond  font-medium text-[#7E1835] lg:w-[288px] w-full mb-6 leading-tight relative z-10">
                             Trusted. Confidential. Able. Principled.
                         </h2>
                         <p className="text-gray-700 text-sm leading-relaxed relative z-10">
@@ -88,7 +88,7 @@ export default function AboutBalance() {
                             {/* Icon */}
                             <BookOpen className="w-[120px] h-[120px]" />
                         </div>
-                        <h2 className="text-xl font-medium text-[#7E1835] lg:w-[288px] w-full mb-6 leading-tight relative z-10">
+                        <h2 className="text-xl font-garamond  font-medium text-[#7E1835] lg:w-[288px] w-full mb-6 leading-tight relative z-10">
                             Skilled Representation. Honest Counsel.
                         </h2>
                         <p className="text-gray-700 text-sm leading-relaxed relative z-10">

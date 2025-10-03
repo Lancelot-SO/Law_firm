@@ -6,10 +6,10 @@ import NextAbout from '../Components/aboutsection/NextAbout'
 import Circles from '../Components/aboutsection/Circles'
 import AboutTower from '../Components/aboutsection/AboutTower'
 import AboutBalance from '../Components/aboutsection/AboutBalance'
-import BalanceSection from '../Components/homesection/BalanceSection'
 import Reach from '../Components/aboutsection/Reach'
 import TestimonialSlider from '../Components/homesection/TestimonialSlider'
 import Partners from '../Components/aboutsection/Partners'
+import AboutBalanceSection from '../Components/homesection/AboutBalanceSection'
 
 const About = () => {
     return (
@@ -20,7 +20,7 @@ const About = () => {
             <Circles />
             <AboutTower />
             <AboutBalance />
-            <BalanceSection />
+            <AboutBalanceSection />
             <Reach />
             <Partners />
             <TestimonialSlider />

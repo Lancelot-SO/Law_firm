@@ -23,7 +23,7 @@ export default function TagsNavigation() {
                             <button
                                 key={tag}
                                 onClick={() => setActiveTag(tag)}
-                                className={`relative pb-4 text-sm font-medium whitespace-nowrap transition-colors hover:text-gray-900 ${activeTag === tag ? "text-gray-900" : "text-gray-500"
+                                className={`relative pb-4 text-sm font-medium font-garamond whitespace-nowrap transition-colors hover:text-gray-900 ${activeTag === tag ? "text-gray-900" : "text-gray-500"
                                     }`}
                             >
                                 {tag}

@@ -38,7 +38,7 @@ const AboutTower = () => {
                                 transition={{ duration: 0.8, delay: 0.5 }}
                             >
                                 <p className="text-gray-700 text-[45px] font-garamond leading-[54px]">
-                                    <span className="text-[#7E1835]">Integrity</span> isn’t optional here. It’s our <span className="text-[#7E1835]">strategy.</span>
+                                    <span className="text-[#7E1835] font-playfair" >Integrity</span> Isn’t Optional Here. It’s our <span className="text-[#7E1835] font-playfair">Strategy.</span>
                                 </p>
                             </motion.div>
 
@@ -49,7 +49,7 @@ const AboutTower = () => {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                             >
                                 <div className="w-2 h-2 bg-[#7E1835] rounded-full mr-3"></div>
-                                <span className="text-sm font-medium text-[#7E1835] tracking-wide">
+                                <span className="text-sm font-playfair font-medium text-[#7E1835] tracking-wide">
                                     Our Ethos
                                 </span>
                             </motion.div>
@@ -126,8 +126,8 @@ const AboutTower = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 1.9 }}
                             >
-                                <h2 className="text-[16px] font-semibold text-[#7E1835] mb-4">Our Commitment To Ethical Standards</h2>
-                                <p className="text-gray-800 text-[14px] leading-relaxed mb-6">
+                                <h2 className="text-[16px] font-outfit font-semibold text-[#7E1835] mb-4">Our Commitment To Ethical Standards</h2>
+                                <p className="text-gray-800 font-outfit text-[14px] leading-relaxed mb-6">
                                     At Kwame Akuffo & Co, We Adhere To The Ghana Bar Association's Code Of Ethics. We Ensure That Our Actions And
                                     Decisions Do Not Compromise Our Independence, Integrity, Or Duty To Our Clients.
                                 </p>
@@ -139,8 +139,8 @@ const AboutTower = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 2.2 }}
                             >
-                                <h2 className="text-[16px] font-semibold text-[#7E1835] mb-4">Our Approach To Client Service</h2>
-                                <p className="text-gray-800 text-[14px] leading-relaxed mb-6">
+                                <h2 className="text-[16px] font-outfit font-semibold text-[#7E1835] mb-4">Our Approach To Client Service</h2>
+                                <p className="text-gray-800 font-outfit text-[14px] leading-relaxed mb-6">
                                     We Take The Time To Understand Our Clients' Unique Needs And Adapt To Their Changing Demands. We Provide
                                     Personalized Attention, Commercial Awareness, And Realistic Advice To Help Our Clients Achieve Their Goals.
                                 </p>
@@ -152,26 +152,26 @@ const AboutTower = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 2.5 }}
                             >
-                                <h2 className="text-[16px] font-semibold text-[#7E1835] mb-4">Our Commitment To Client Care</h2>
-                                <p className="text-gray-800 text-[14px] leading-relaxed mb-4">
+                                <h2 className="text-[16px] font-outfit font-semibold text-[#7E1835] mb-4">Our Commitment To Client Care</h2>
+                                <p className="text-gray-800 font-outfit text-[14px] leading-relaxed mb-4">
                                     We Are Dedicated To Providing Exceptional Client Service By:
                                 </p>
                                 <ul className="space-y-3 text-gray-800">
                                     <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
-                                        <span>Carrying Out Client Instructions Diligently And Promptly.</span>
+                                        <span className='font-outfit'>Carrying Out Client Instructions Diligently And Promptly.</span>
                                     </li>
                                     <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
-                                        <span>Ensuring Clients Understand And Consent To Our Actions.</span>
+                                        <span className='font-outfit'>Ensuring Clients Understand And Consent To Our Actions.</span>
                                     </li>
                                     <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
-                                        <span>Keeping Clients Informed Of Progress And Changes In The Law.</span>
+                                        <span className='font-outfit'>Keeping Clients Informed Of Progress And Changes In The Law.</span>
                                     </li>
                                     <li className="flex items-start text-[14px]">
                                         <span className="text-[#7E1835] mr-3 mt-1">•</span>
-                                        <span>Complying With Reasonable Requests For Information.</span>
+                                        <span className='font-outfit'>Complying With Reasonable Requests For Information.</span>
                                     </li>
                                 </ul>
                             </motion.section>

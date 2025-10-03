@@ -70,7 +70,7 @@ export default function BlogDetails() {
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span>he Legal Lens: Informed, Strategic, Sharp.</span>
+                            <span className="font-garamond">he Legal Lens: Informed, Strategic, Sharp.</span>
                         </motion.span>
                     </span>
 
@@ -140,7 +140,7 @@ export default function BlogDetails() {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             T
                         </span>
-                        <span>he Legal Lens: Informed, Strategic, Sharp.</span>
+                        <span className="font-garamond">he Legal Lens: Informed, Strategic, Sharp.</span>
                     </motion.h1>
 
                     <motion.p

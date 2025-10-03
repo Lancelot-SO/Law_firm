@@ -23,7 +23,7 @@ export default function Circles() {
                         <tspan x="160" dy="-1em" className="font-garamond text-[16px] fill-black">
                             22500+
                         </tspan>
-                        <tspan x="160" dy="1.2em" className="font-garamond text-[8px]" fill="#7E1835">
+                        <tspan x="160" dy="2em" className="font-garamond text-[8px]" fill="#7E1835">
                             COMPANIES WE HAVE HELPED
                         </tspan>
                     </text>
@@ -49,7 +49,7 @@ export default function Circles() {
                         <tspan x="400" dy="-1em" className="font-garamond text-[16px] fill-black">
                             22500+
                         </tspan>
-                        <tspan x="400" dy="1.2em" className="font-garamond text-[8px]" fill="#7E1835">
+                        <tspan x="400" dy="2em" className="font-garamond text-[8px]" fill="#7E1835">
                             LEGAL CONSULTATIONS
                         </tspan>
                     </text>
@@ -67,7 +67,7 @@ export default function Circles() {
                         <tspan x="640" dy="-1em" className="font-garamond text-[16px] fill-black">
                             22500+
                         </tspan>
-                        <tspan x="640" dy="1.2em" className="font-garamond text-[8px]" fill="#7E1835">
+                        <tspan x="640" dy="2em" className="font-garamond text-[8px]" fill="#7E1835">
                             YEARS OF EXPERIENCE
                         </tspan>
                     </text>
