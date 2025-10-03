@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import balance from "../../assets/home/balance.png"
@@ -27,7 +28,7 @@ const BalanceSection = () => {
 
                         <div className=' px-4 md:px-4 lg:px-0 4xl:px-0'>
                             <h2 className=" text-white font-garamond font-semibold text-2xl md:text-3xl lg:text-4xl mb-10">
-                                We Don’t Play The Odds. We Shape Them.
+                                WE DON'T PLAY THE ODDS. WE SHAPE THEM.
                             </h2>
 
                             {/* CTA */}

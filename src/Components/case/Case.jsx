@@ -53,7 +53,7 @@ const Case = () => {
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span>ase Studies: Legal Strategy in Action.</span>
+                            <span className='font-garamond'>ase Studies: Legal Strategy in Action.</span>
                         </motion.span>
                     </span>
 
@@ -123,7 +123,7 @@ const Case = () => {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             C
                         </span>
-                        <span> ase Studies: Legal Strategy in Action.</span>
+                        <span className='font-garamond'> ase Studies: Legal Strategy in Action.</span>
                     </motion.h1>
 
                     <motion.p

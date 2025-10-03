@@ -15,7 +15,7 @@ export default function AboutBio() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
                             <div className="w-2 h-2 bg-[#7E1835] rounded-full mr-3"></div>
-                            <span className="text-sm font-medium text-[#7E1835] tracking-wide">
+                            <span className="text-[14px] font-playfair font-bold text-[#7E1835] tracking-wide">
                                 ABOUT US
                             </span>
                         </motion.div>

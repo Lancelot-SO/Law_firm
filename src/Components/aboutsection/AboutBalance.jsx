@@ -48,7 +48,7 @@ export default function AboutBalance() {
 
                 {/* Three columns with staggered animation */}
                 <motion.div
-                    className="grid lg:grid-cols-3 grid-cols-2 gap-8"
+                    className="grid lg:grid-cols-3 grid-cols-1 gap-8"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="show"

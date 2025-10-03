@@ -203,7 +203,7 @@ export default function TestimonialSlider() {
                                 </span>
                             </div>
 
-                            <div className="text-lg font-light text-[#7E1835]">
+                            <div className="text-[24px] font-playfair font-light text-[#7E1835]">
                 // {String(currentSlide + 1).padStart(2, "0")}
                             </div>
 
@@ -224,21 +224,21 @@ export default function TestimonialSlider() {
                                         {/* Top row: position / name / company */}
                                         <div className="mb-8 flex w-full flex-col gap-4 border-b border-gray-200 pb-8 md:flex-row md:items-center md:justify-between">
                                             <div className="text-left">
-                                                <h2 className="text-[16px] font-normal text-gray-600 ">{t.position}</h2>
+                                                <h2 className="text-[16px] font-garamond font-normal text-gray-600 ">{t.position}</h2>
                                             </div>
 
                                             <div className="text-left md:text-center">
-                                                <h3 className="text-[24px] font-bold text-[#7E1835]">{t.name}</h3>
+                                                <h3 className="text-[24px] font-garamond font-bold text-[#7E1835]">{t.name}</h3>
                                             </div>
 
                                             <div className="text-left md:text-right">
-                                                <h2 className="text-[16px] font-normal text-gray-600 ">{t.company}</h2>
+                                                <h2 className="text-[16px] font-garamond font-normal text-gray-600 ">{t.company}</h2>
                                             </div>
                                         </div>
 
                                         {/* Quote */}
                                         <div className="mx-auto mt-8 max-w-4xl text-center">
-                                            <blockquote className="text-base font-normal leading-relaxed text-gray-700 md:text-lg">
+                                            <blockquote className="text-base font-outfit font-normal leading-relaxed text-gray-700 md:text-lg">
                                                 {t.quote}
                                             </blockquote>
                                         </div>
