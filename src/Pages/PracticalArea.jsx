@@ -71,7 +71,7 @@ const PracticalArea = () => {
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span>lear. Strategic. Focused Legal Solutions.</span>
+                            <span className='font-garamond'>lear. Strategic. Focused Legal Solutions.</span>
                         </motion.span>
                     </span>
 
@@ -141,7 +141,7 @@ const PracticalArea = () => {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             C
                         </span>
-                        <span>lear. Strategic. Focused Legal Solutions.</span>
+                        <span className='font-garamond'>lear. Strategic. Focused Legal Solutions.</span>
                     </motion.h1>
 
                     <motion.p
