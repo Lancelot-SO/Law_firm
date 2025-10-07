@@ -7,6 +7,7 @@ import practicalbg from "../../assets/practical/practicalbg.png";
 import main from "../../assets/practical/main.png";
 import { Link, useLocation } from "react-router-dom";
 import Team from '../homesection/Team';
+import Linesteps from './Linesteps';
 
 const containerVariants = {
     hidden: {},
@@ -287,7 +288,7 @@ const Banking = () => {
                     </aside>
                 </div>
             </section>
-
+            <Linesteps />
             <Team />
         </div>
     )
