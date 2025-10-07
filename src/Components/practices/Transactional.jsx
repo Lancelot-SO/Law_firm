@@ -32,7 +32,7 @@ const sidebar = [
     { label: "Transactional Advisory", to: "/advisory" },
     { label: "Corporate and Commercial Law", to: "/corporate" },
     { label: "Banking and Financial Institutional Matters", to: "/banking" },
-    { label: "Legal Due Diligence Investigation", to: "/legal" },
+    { label: "Legal Due Diligence Investigation", to: "/legal-investigation" },
 ];
 
 const Transactional = () => {

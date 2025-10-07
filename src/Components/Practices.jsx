@@ -183,7 +183,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/corporate"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -233,7 +233,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/banking"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -283,7 +283,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/legal-investigation"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -333,7 +333,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/complex"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -382,7 +382,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/property"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -429,7 +429,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/labour"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -477,7 +477,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/arbitration"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -525,7 +525,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/entertainment"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />

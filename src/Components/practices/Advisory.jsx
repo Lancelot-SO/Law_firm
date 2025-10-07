@@ -32,7 +32,7 @@ const sidebar = [
     { label: "Transactional Business Law", to: "/transactional" },
     { label: "Corporate & Project Finance", to: "/practice-areas/corporate-finance" },
     { label: "Banking and Financial Institutional Matters", to: "/banking" },
-    { label: "Legal Due Diligence Investigation", to: "/legal" },
+    { label: "Legal Due Diligence Investigation", to: "/legal-investigation" },
 ];
 
 const Advisory = () => {

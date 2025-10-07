@@ -18,24 +18,24 @@ const itemVariants = {
 };
 
 const areas = [
-    "Advising on banking and securities regulations",
-    "Structuring loan and financing arrangements",
-    "Drafting and reviewing facility agreements and security documents",
-    "Guiding financial institutions on compliance with statutory and regulatory frameworks",
-    "Supporting dispute resolution in banking and financial matters",
+    "Negotiating structured repayment agreements",
+    "Issuing demand notices and initiating recovery proceedings",
+    "Enforcing judgments and security interests",
+    "Pursuing asset tracing and recovery actions",
+    "Advising creditors on strategies for complex or cross-border debt recovery",
 ];
 
 const sidebar = [
     { label: "All Practice Areas", to: "/practice-area" },
     { label: "Litigation and Dispute Resolution", to: "/litigation" },
-    { label: "Banking and Financial Institutional Matters", to: "/banking" },
-    { label: "Transactional Advisory", to: "/advisory" },
+    { label: "Complex Debt Recovery", to: "/complex" },
     { label: "Transactional Business Law", to: "/transactional" },
-    { label: "Corporate and Commercial Law", to: "/corporate" },
+    { label: "Corporate & Project Finance", to: "/practice-areas/corporate-finance" },
+    { label: "Banking and Financial Institutional Matters", to: "/banking" },
     { label: "Legal Due Diligence Investigation", to: "/legal-investigation" },
 ];
 
-const Banking = () => {
+const Complex = () => {
 
     const { pathname } = useLocation();
 
@@ -64,13 +64,13 @@ const Banking = () => {
                             className="font-garamond font-semibold lg:leading-[70px] md:leading-[50px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
-                            L
+                            R
                         </motion.span>
                         <motion.span
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                            <span className='font-garamond'>ecovering Value. Restoring Confidence.</span>
                         </motion.span>
                     </span>
 
@@ -78,7 +78,7 @@ const Banking = () => {
                         className="w-[535px] text-[12px] leading-5 font-normal text-white"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        Unpaid debts can drain businesses and stall growth. We provide clear, lawful, and results-driven strategies to recover what is owed while safeguarding our clients’ interests.
                     </motion.span>
 
                     {/* <motion.div variants={itemVariants}>
@@ -139,16 +139,16 @@ const Banking = () => {
                         variants={itemVariants}
                     >
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
-                            L
+                            R
                         </span>
-                        <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                        <span className='font-garamond'>ecovering Value. Restoring Confidence.</span>
                     </motion.h1>
 
                     <motion.p
                         className="text-white text-sm sm:text-base leading-relaxed"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        Unpaid debts can drain businesses and stall growth. We provide clear, lawful, and results-driven strategies to recover what is owed while safeguarding our clients’ interests.
                     </motion.p>
 
                     {/* <motion.div variants={itemVariants}>
@@ -230,7 +230,7 @@ const Banking = () => {
                             </h2>
                             <div className="my-3 h-px w-full bg-gray-200" />
 
-                            <span>Our Banking and Financial Institutional practice covers:</span>
+                            <span>Our Debt Recovery services include:</span>
                             <ul className="mt-5 space-y-2">
                                 {areas.map((a, i) => (
                                     <li key={i} className="flex items-start gap-3">
@@ -243,7 +243,7 @@ const Banking = () => {
 
                         <motion.section className='my-8' variants={itemVariants}>
                             <span>
-                                Our goal is to ensure that financial transactions are robust, enforceable, and aligned with both legal requirements and business objectives.                            </span>
+                                Our objective is not just recovery, but the restoration of business certainty and confidence.                            </span>
                         </motion.section>
 
                         {/* Client-Centric */}
@@ -253,7 +253,7 @@ const Banking = () => {
                             </h2>
                             <div className="mt-3 h-px w-full bg-gray-200" />
                             <p className="mt-4 text-[15px] leading-7 text-[#222933]">
-                                We understand the sensitivity of financial matters. All advice, documents, and discussions are handled with the highest levels of discretion and confidentiality. Our priority is to protect our clients’ financial interests while maintaining strict compliance with regulatory standards.                            </p>
+                                We understand that debt matters often involve sensitive financial and commercial details. Every case is handled with discretion, protecting client reputations while ensuring that recoveries are pursued vigorously and lawfully.                            </p>
                         </motion.section>
                     </motion.article>
 
@@ -293,4 +293,4 @@ const Banking = () => {
     )
 }
 
-export default Banking
+export default Complex

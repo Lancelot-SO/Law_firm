@@ -18,24 +18,24 @@ const itemVariants = {
 };
 
 const areas = [
-    "Advising on banking and securities regulations",
-    "Structuring loan and financing arrangements",
-    "Drafting and reviewing facility agreements and security documents",
-    "Guiding financial institutions on compliance with statutory and regulatory frameworks",
-    "Supporting dispute resolution in banking and financial matters",
+    "Conducting due diligence on land and property titles",
+    "Drafting and reviewing sales and lease agreements",
+    "Handling land title registrations and searches",
+    "Advising on property financing and mortgages",
+    "Resolving disputes over ownership, boundaries, or tenancy",
 ];
 
 const sidebar = [
     { label: "All Practice Areas", to: "/practice-area" },
     { label: "Litigation and Dispute Resolution", to: "/litigation" },
-    { label: "Banking and Financial Institutional Matters", to: "/banking" },
-    { label: "Transactional Advisory", to: "/advisory" },
+    { label: "Property and Conveyancing", to: "/property" },
     { label: "Transactional Business Law", to: "/transactional" },
-    { label: "Corporate and Commercial Law", to: "/corporate" },
+    { label: "Corporate & Project Finance", to: "/practice-areas/corporate-finance" },
+    { label: "Banking and Financial Institutional Matters", to: "/banking" },
     { label: "Legal Due Diligence Investigation", to: "/legal-investigation" },
 ];
 
-const Banking = () => {
+const Property = () => {
 
     const { pathname } = useLocation();
 
@@ -64,13 +64,13 @@ const Banking = () => {
                             className="font-garamond font-semibold lg:leading-[70px] md:leading-[50px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
-                            L
+                            S
                         </motion.span>
                         <motion.span
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                            <span className='font-garamond'>ecuring Property. Protecting Investments.</span>
                         </motion.span>
                     </span>
 
@@ -78,7 +78,7 @@ const Banking = () => {
                         className="w-[535px] text-[12px] leading-5 font-normal text-white"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        Property transactions require accuracy, compliance, and foresight. We ensure every sale, lease, and registration is handled with the precision needed to safeguard our clients’ rights and investments.
                     </motion.span>
 
                     {/* <motion.div variants={itemVariants}>
@@ -139,16 +139,16 @@ const Banking = () => {
                         variants={itemVariants}
                     >
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
-                            L
+                            S
                         </span>
-                        <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                        <span className='font-garamond'>ecuring Property. Protecting Investments.</span>
                     </motion.h1>
 
                     <motion.p
                         className="text-white text-sm sm:text-base leading-relaxed"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        Property transactions require accuracy, compliance, and foresight. We ensure every sale, lease, and registration is handled with the precision needed to safeguard our clients’ rights and investments.
                     </motion.p>
 
                     {/* <motion.div variants={itemVariants}>
@@ -220,7 +220,8 @@ const Banking = () => {
                             </h2>
                             <div className="mt-3 h-px w-full bg-gray-200" />
                             <p className="mt-4 text-[15px] leading-7 text-[#222933]">
-                                We believe that strong advisory work begins with understanding the bigger picture. At Kwame Akuffo & Co. Unlimited, we don’t just review documents—we align legal strategy with your commercial objectives. We anticipate issues before they arise, structure solutions that withstand scrutiny, and provide advice that works in the boardroom as well as the courtroom.                            </p>
+                                At Kwame Akuffo & Co. Unlimited, we know that property matters are high-value and high-stakes. Our approach is to provide thorough legal support that minimizes risk, prevents disputes, and ensures compliance with Ghana’s land and property laws. From due diligence to final registration, we focus on giving our clients clarity and confidence in every step.
+                            </p>
                         </motion.section>
 
                         {/* Areas of Expertise */}
@@ -230,7 +231,7 @@ const Banking = () => {
                             </h2>
                             <div className="my-3 h-px w-full bg-gray-200" />
 
-                            <span>Our Banking and Financial Institutional practice covers:</span>
+                            <span>Our Property and Conveyancing services include:</span>
                             <ul className="mt-5 space-y-2">
                                 {areas.map((a, i) => (
                                     <li key={i} className="flex items-start gap-3">
@@ -243,7 +244,7 @@ const Banking = () => {
 
                         <motion.section className='my-8' variants={itemVariants}>
                             <span>
-                                Our goal is to ensure that financial transactions are robust, enforceable, and aligned with both legal requirements and business objectives.                            </span>
+                                Our work ensures that property transactions are enforceable, transparent, and legally sound.                            </span>
                         </motion.section>
 
                         {/* Client-Centric */}
@@ -253,7 +254,7 @@ const Banking = () => {
                             </h2>
                             <div className="mt-3 h-px w-full bg-gray-200" />
                             <p className="mt-4 text-[15px] leading-7 text-[#222933]">
-                                We understand the sensitivity of financial matters. All advice, documents, and discussions are handled with the highest levels of discretion and confidentiality. Our priority is to protect our clients’ financial interests while maintaining strict compliance with regulatory standards.                            </p>
+                                We understand the sensitivity of property dealings, especially where large investments or family assets are concerned. All transactions are handled with strict confidentiality, with our primary focus on protecting our clients’ financial and legal interests.                            </p>
                         </motion.section>
                     </motion.article>
 
@@ -293,4 +294,4 @@ const Banking = () => {
     )
 }
 
-export default Banking
+export default Property

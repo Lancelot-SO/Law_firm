@@ -18,24 +18,24 @@ const itemVariants = {
 };
 
 const areas = [
-    "Advising on banking and securities regulations",
-    "Structuring loan and financing arrangements",
-    "Drafting and reviewing facility agreements and security documents",
-    "Guiding financial institutions on compliance with statutory and regulatory frameworks",
-    "Supporting dispute resolution in banking and financial matters",
+    "Drafting and reviewing contracts for artists, producers, and media companies",
+    "Advising on licensing, royalties, and distribution rights",
+    "Protecting intellectual property, including copyrights and trademarks",
+    "Resolving disputes in entertainment and media agreements",
+    "Guiding clients through negotiations with broadcasters, publishers, and distributors",
 ];
 
 const sidebar = [
     { label: "All Practice Areas", to: "/practice-area" },
     { label: "Litigation and Dispute Resolution", to: "/litigation" },
-    { label: "Banking and Financial Institutional Matters", to: "/banking" },
-    { label: "Transactional Advisory", to: "/advisory" },
+    { label: "Entertainment Law", to: "/entertainment" },
     { label: "Transactional Business Law", to: "/transactional" },
-    { label: "Corporate and Commercial Law", to: "/corporate" },
+    { label: "Corporate & Project Finance", to: "/practice-areas/corporate-finance" },
+    { label: "Banking and Financial Institutional Matters", to: "/banking" },
     { label: "Legal Due Diligence Investigation", to: "/legal-investigation" },
 ];
 
-const Banking = () => {
+const Entertainment = () => {
 
     const { pathname } = useLocation();
 
@@ -64,13 +64,13 @@ const Banking = () => {
                             className="font-garamond font-semibold lg:leading-[70px] md:leading-[50px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
-                            L
+                            P
                         </motion.span>
                         <motion.span
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                            <span className='font-garamond'>rotecting Creativity. Securing Rights.</span>
                         </motion.span>
                     </span>
 
@@ -78,7 +78,7 @@ const Banking = () => {
                         className="w-[535px] text-[12px] leading-5 font-normal text-white"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        The creative industry thrives on ideas, talent, and innovation. We provide the legal framework that ensures creators, producers, and media companies can focus on their craft while their rights and interests remain protected.
                     </motion.span>
 
                     {/* <motion.div variants={itemVariants}>
@@ -139,16 +139,16 @@ const Banking = () => {
                         variants={itemVariants}
                     >
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
-                            L
+                            P
                         </span>
-                        <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                        <span className='font-garamond'>rotecting Creativity. Securing Rights.</span>
                     </motion.h1>
 
                     <motion.p
                         className="text-white text-sm sm:text-base leading-relaxed"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        The creative industry thrives on ideas, talent, and innovation. We provide the legal framework that ensures creators, producers, and media companies can focus on their craft while their rights and interests remain protected.
                     </motion.p>
 
                     {/* <motion.div variants={itemVariants}>
@@ -220,7 +220,8 @@ const Banking = () => {
                             </h2>
                             <div className="mt-3 h-px w-full bg-gray-200" />
                             <p className="mt-4 text-[15px] leading-7 text-[#222933]">
-                                We believe that strong advisory work begins with understanding the bigger picture. At Kwame Akuffo & Co. Unlimited, we don’t just review documents—we align legal strategy with your commercial objectives. We anticipate issues before they arise, structure solutions that withstand scrutiny, and provide advice that works in the boardroom as well as the courtroom.                            </p>
+                                At Kwame Akuffo & Co. Unlimited, we understand the unique challenges of the entertainment and media industries. Our approach is to combine legal precision with industry awareness, ensuring contracts and agreements not only safeguard rights but also support growth and opportunity. We aim to protect creators while giving businesses the clarity they need to thrive in competitive markets.
+                            </p>
                         </motion.section>
 
                         {/* Areas of Expertise */}
@@ -230,7 +231,7 @@ const Banking = () => {
                             </h2>
                             <div className="my-3 h-px w-full bg-gray-200" />
 
-                            <span>Our Banking and Financial Institutional practice covers:</span>
+                            <span>Our Entertainment Law services include:</span>
                             <ul className="mt-5 space-y-2">
                                 {areas.map((a, i) => (
                                     <li key={i} className="flex items-start gap-3">
@@ -243,7 +244,8 @@ const Banking = () => {
 
                         <motion.section className='my-8' variants={itemVariants}>
                             <span>
-                                Our goal is to ensure that financial transactions are robust, enforceable, and aligned with both legal requirements and business objectives.                            </span>
+                                We ensure that creativity is legally protected and commercially secure.
+                            </span>
                         </motion.section>
 
                         {/* Client-Centric */}
@@ -253,7 +255,7 @@ const Banking = () => {
                             </h2>
                             <div className="mt-3 h-px w-full bg-gray-200" />
                             <p className="mt-4 text-[15px] leading-7 text-[#222933]">
-                                We understand the sensitivity of financial matters. All advice, documents, and discussions are handled with the highest levels of discretion and confidentiality. Our priority is to protect our clients’ financial interests while maintaining strict compliance with regulatory standards.                            </p>
+                                We recognize that entertainment matters often involve high-profile individuals and sensitive negotiations. Every matter is handled with discretion and confidentiality, ensuring that our clients’ reputations and rights remain protected.                            </p>
                         </motion.section>
                     </motion.article>
 
@@ -293,4 +295,4 @@ const Banking = () => {
     )
 }
 
-export default Banking
+export default Entertainment

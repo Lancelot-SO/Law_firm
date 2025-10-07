@@ -28,7 +28,7 @@ const areas = [
 const sidebar = [
     { label: "All Practice Areas", to: "/practice-area" },
     { label: "Litigation and Dispute Resolution", to: "/litigation" },
-    { label: "Legal Due Diligence Investigation", to: "/legal" },
+    { label: "Legal Due Diligence Investigation", to: "/legal-investigation" },
     { label: "Transactional Advisory", to: "/advisory" },
     { label: "Transactional Business Law", to: "/transactional" },
     { label: "Corporate & Project Finance", to: "/practice-areas/corporate-finance" },

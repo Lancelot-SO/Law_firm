@@ -18,7 +18,12 @@ import Transactional from './Components/practices/Transactional'
 import Advisory from './Components/practices/Advisory'
 import Corporate from './Components/practices/Corporate'
 import Banking from './Components/practices/Banking'
-import Legal from './Components/homesection/Legal'
+import Legal from './Components/practices/Legal'
+import Complex from './Components/practices/Complex'
+import Property from './Components/practices/Property'
+import Labour from './Components/practices/Labour'
+import Abitration from './Components/practices/Arbitration'
+import Entertainment from './Components/practices/Entertainment'
 
 
 function App() {
@@ -42,7 +47,12 @@ function App() {
           <Route path='/advisory' element={<Advisory />} />
           <Route path='/corporate' element={<Corporate />} />
           <Route path='/banking' element={<Banking />} />
-          <Route path='/legal' element={<Legal />} />
+          <Route path='/legal-investigation' element={<Legal />} />
+          <Route path='/complex' element={<Complex />} />
+          <Route path='/property' element={<Property />} />
+          <Route path='/labour' element={<Labour />} />
+          <Route path='/arbitration' element={<Abitration />} />
+          <Route path='/entertainment' element={<Entertainment />} />
         </Routes>
         <Footer />
       </BrowserRouter>

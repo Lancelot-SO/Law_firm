@@ -18,24 +18,24 @@ const itemVariants = {
 };
 
 const areas = [
-    "Advising on banking and securities regulations",
-    "Structuring loan and financing arrangements",
-    "Drafting and reviewing facility agreements and security documents",
-    "Guiding financial institutions on compliance with statutory and regulatory frameworks",
-    "Supporting dispute resolution in banking and financial matters",
+    "Representing clients in arbitration proceedings",
+    "Facilitating mediation and settlement negotiations",
+    "Advising on enforcement of arbitral awards",
+    "Structuring dispute resolution clauses in contracts",
+    "Handling cross-border arbitration and multi-jurisdictional matters",
 ];
 
 const sidebar = [
     { label: "All Practice Areas", to: "/practice-area" },
     { label: "Litigation and Dispute Resolution", to: "/litigation" },
-    { label: "Banking and Financial Institutional Matters", to: "/banking" },
-    { label: "Transactional Advisory", to: "/advisory" },
+    { label: "Arbitration and Dispute Resolution", to: "/abitration" },
     { label: "Transactional Business Law", to: "/transactional" },
-    { label: "Corporate and Commercial Law", to: "/corporate" },
+    { label: "Corporate & Project Finance", to: "/practice-areas/corporate-finance" },
+    { label: "Banking and Financial Institutional Matters", to: "/banking" },
     { label: "Legal Due Diligence Investigation", to: "/legal-investigation" },
 ];
 
-const Banking = () => {
+const Abitration = () => {
 
     const { pathname } = useLocation();
 
@@ -64,13 +64,13 @@ const Banking = () => {
                             className="font-garamond font-semibold lg:leading-[70px] md:leading-[50px] tracking-[-4%] text-[102px] text-[#7E1835]"
                             variants={itemVariants}
                         >
-                            L
+                            R
                         </motion.span>
                         <motion.span
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                            <span className='font-garamond'>esolving Disputes. Preserving Relationships.</span>
                         </motion.span>
                     </span>
 
@@ -78,7 +78,7 @@ const Banking = () => {
                         className="w-[535px] text-[12px] leading-5 font-normal text-white"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        Not every conflict belongs in the courtroom. We provide efficient, confidential, and practical dispute resolution services that protect our clients’ interests while minimizing disruption and preserving valuable relationships.
                     </motion.span>
 
                     {/* <motion.div variants={itemVariants}>
@@ -139,16 +139,16 @@ const Banking = () => {
                         variants={itemVariants}
                     >
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
-                            L
+                            R
                         </span>
-                        <span className='font-garamond'>egal Precision for a Regulated Industry.</span>
+                        <span className='font-garamond'>esolving Disputes. Preserving Relationships.</span>
                     </motion.h1>
 
                     <motion.p
                         className="text-white text-sm sm:text-base leading-relaxed"
                         variants={itemVariants}
                     >
-                        Banking and finance demand clarity, compliance, and certainty. We provide legal support that helps institutions manage risk, meet regulatory obligations, and complete transactions with confidence.
+                        Not every conflict belongs in the courtroom. We provide efficient, confidential, and practical dispute resolution services that protect our clients’ interests while minimizing disruption and preserving valuable relationships.
                     </motion.p>
 
                     {/* <motion.div variants={itemVariants}>
@@ -220,7 +220,8 @@ const Banking = () => {
                             </h2>
                             <div className="mt-3 h-px w-full bg-gray-200" />
                             <p className="mt-4 text-[15px] leading-7 text-[#222933]">
-                                We believe that strong advisory work begins with understanding the bigger picture. At Kwame Akuffo & Co. Unlimited, we don’t just review documents—we align legal strategy with your commercial objectives. We anticipate issues before they arise, structure solutions that withstand scrutiny, and provide advice that works in the boardroom as well as the courtroom.                            </p>
+                                At Kwame Akuffo & Co. Unlimited, we view alternative dispute resolution as a strategic tool for achieving outcomes without the delays and costs of prolonged litigation. Our approach is to combine legal expertise with negotiation skills, ensuring that disputes are resolved fairly, efficiently, and in ways that align with our clients’ broader goals.
+                            </p>
                         </motion.section>
 
                         {/* Areas of Expertise */}
@@ -230,7 +231,7 @@ const Banking = () => {
                             </h2>
                             <div className="my-3 h-px w-full bg-gray-200" />
 
-                            <span>Our Banking and Financial Institutional practice covers:</span>
+                            <span>Our Arbitration and Dispute Resolution services include:</span>
                             <ul className="mt-5 space-y-2">
                                 {areas.map((a, i) => (
                                     <li key={i} className="flex items-start gap-3">
@@ -243,7 +244,7 @@ const Banking = () => {
 
                         <motion.section className='my-8' variants={itemVariants}>
                             <span>
-                                Our goal is to ensure that financial transactions are robust, enforceable, and aligned with both legal requirements and business objectives.                            </span>
+                                Our focus is always on resolving disputes in ways that are legally sound and commercially practical.                            </span>
                         </motion.section>
 
                         {/* Client-Centric */}
@@ -253,7 +254,7 @@ const Banking = () => {
                             </h2>
                             <div className="mt-3 h-px w-full bg-gray-200" />
                             <p className="mt-4 text-[15px] leading-7 text-[#222933]">
-                                We understand the sensitivity of financial matters. All advice, documents, and discussions are handled with the highest levels of discretion and confidentiality. Our priority is to protect our clients’ financial interests while maintaining strict compliance with regulatory standards.                            </p>
+                                Disputes often involve sensitive business or personal matters. We handle every case with the strictest confidentiality, ensuring that our clients’ reputations and interests remain protected throughout the resolution process.                            </p>
                         </motion.section>
                     </motion.article>
 
@@ -293,4 +294,4 @@ const Banking = () => {
     )
 }
 
-export default Banking
+export default Abitration
