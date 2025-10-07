@@ -8,7 +8,6 @@ import practicalbg from "../assets/practical/practicalbg.png"
 import practice from "../assets/practical/practice.png"
 
 
-import { Link } from 'react-router-dom'
 import Practices from '../Components/Practices'
 
 

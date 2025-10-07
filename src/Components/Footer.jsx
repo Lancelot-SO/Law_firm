@@ -15,7 +15,7 @@ export default function Footer() {
 
 
     return (
-        <div>
+        <div className="overflow-hidden">
             {/* Hero Section with Contact Info */}
             <div
                 className="relative text-white py-20 px-4 lg:px-12 4xl:px-32"

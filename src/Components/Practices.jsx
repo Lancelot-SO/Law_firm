@@ -85,7 +85,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/transactional"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
@@ -134,7 +134,7 @@ const Practices = () => {
 
                             {/* Route Button */}
                             <Link
-                                to="/diligence"
+                                to="/advisory"
                                 className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
                             >
                                 <ArrowRight />
