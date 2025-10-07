@@ -9,14 +9,14 @@ export default function PracticalSection() {
 
     // ✅ Practice areas with IDs and direct links
     const practiceAreas = [
-        { id: 1, title: "Transactional Business Law", link: "/practice/litigation-and-dispute-resolution" },
-        { id: 2, title: "Complex Debt Recovery", link: "/practice/corporate-and-commercial-transaction" },
-        { id: 3, title: "Transactional Advisory", link: "/practice/due-diligence-services" },
-        { id: 4, title: "Litigation (Hearings, Appeals, and Review )", link: "/practice/real-estate-construction" },
-        { id: 5, title: "Corporate and Commercial Law", link: "/practice/corporate-project-finance" },
-        { id: 6, title: "Property and Conveyancing", link: "/practice/white-collar-financial-crime" },
-        { id: 7, title: "Banking and Financial Institutional Matters", link: "/practice/secretarial-wing" },
-        { id: 8, title: "Crisis Reputation and Management", link: "/practice/crisis-management" },
+        { id: 1, title: "Transactional Business Law", link: "/transactional" },
+        { id: 2, title: "Complex Debt Recovery", link: "/complex" },
+        { id: 3, title: "Transactional Advisory", link: "/advisory" },
+        { id: 4, title: "Litigation (Hearings, Appeals, and Review )", link: "/litigation" },
+        { id: 5, title: "Corporate and Commercial Law", link: "/corporate" },
+        { id: 6, title: "Property and Conveyancing", link: "/property" },
+        { id: 7, title: "Banking and Financial Institutional Matters", link: "/banking" },
+        { id: 8, title: "Crisis Reputation and Management", link: "/crisis" },
 
     ];
 
