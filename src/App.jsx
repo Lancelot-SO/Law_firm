@@ -24,6 +24,8 @@ import Property from './Components/practices/Property'
 import Labour from './Components/practices/Labour'
 import Abitration from './Components/practices/Arbitration'
 import Entertainment from './Components/practices/Entertainment'
+import Freezing from './Components/practices/Freezing'
+import Crisis from './Components/practices/Crisis'
 
 
 function App() {
@@ -53,6 +55,8 @@ function App() {
           <Route path='/labour' element={<Labour />} />
           <Route path='/arbitration' element={<Abitration />} />
           <Route path='/entertainment' element={<Entertainment />} />
+          <Route path='/freezing' element={<Freezing />} />
+          <Route path='/crisis' element={<Crisis />} />
         </Routes>
         <Footer />
       </BrowserRouter>
