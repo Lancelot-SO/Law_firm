@@ -7,12 +7,9 @@ import { IoIosMail } from 'react-icons/io'
 import practicalbg from "../assets/practical/practicalbg.png"
 import practice from "../assets/practical/practice.png"
 
-import icon1 from "../assets/practical/icon1.png"
-import icon2 from "../assets/practical/icon2.png"
 
-import { ArrowRight } from "lucide-react"
-import practicebook from "../assets/practical/practicebook.png"
 import { Link } from 'react-router-dom'
+import Practices from '../Components/Practices'
 
 
 
@@ -214,105 +211,7 @@ const PracticalArea = () => {
             </section>
 
             <section className="flex flex-col gap-4 bg-[#F2E8EB]">
-                {/* Litigation Card */}
-                <div className="flex flex-col items-center justify-center py-4">
-                    <div className="group flex flex-col lg:flex-row w-full h-auto px-4 lg:px-12 4xl:px-32 border-b-2 border-[#ECDCE1]">
-
-                        {/* Icon */}
-                        <div className="flex w-full lg:w-1/3 items-center justify-center lg:justify-start mb-4 lg:mb-0">
-                            <img
-                                src={icon1}
-                                alt="Placeholder"
-                                loading="lazy"
-                                className="w-12 h-12 lg:w-auto lg:h-auto"
-                            />
-                        </div>
-
-                        {/* Text + Button */}
-                        <div className="flex flex-col w-full lg:w-2/3">
-                            <h3 className="font-garamond font-bold text-[24px] lg:text-[32px] leading-[32px] lg:leading-[48px] tracking-[-2%] text-[#7E1835]">
-                                Litigation And Dispute Resolution
-                            </h3>
-                            <div className="flex flex-col lg:flex-row items-start lg:items-center w-full justify-between gap-3 lg:gap-0">
-                                <span className="text-[14px] lg:text-[16px] font-outfit font-medium text-[#7E1835] w-full lg:w-[611px] leading-[180%] lg:leading-[240%]">
-                                    We represent clients in civil, commercial, and constitutional
-                                    litigation, with a particular strength in complex and
-                                    precedent-setting cases.
-                                </span>
-
-                                {/* Route Button */}
-                                <Link
-                                    to="/litigation"
-                                    className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
-                                >
-                                    <ArrowRight />
-                                </Link>
-                            </div>
-
-                            {/* Hover Image */}
-                            <div
-                                className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 mt-4"
-                            >
-                                <img
-                                    src={practicebook}
-                                    alt="Placeholder"
-                                    className="object-cover h-[173px] w-full mb-2"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Due Diligence Card */}
-                <div className="flex flex-col items-center justify-center py-4">
-                    <div className="group flex flex-col lg:flex-row w-full h-auto px-4 lg:px-12 4xl:px-32 border-b-2 border-[#ECDCE1]">
-
-                        {/* Icon */}
-                        <div className="flex w-full lg:w-1/3 items-center justify-center lg:justify-start mb-4 lg:mb-0">
-                            <img
-                                src={icon2}
-                                alt="Placeholder"
-                                loading="lazy"
-                                className="w-12 h-12 lg:w-auto lg:h-auto"
-                            />
-                        </div>
-
-                        {/* Text + Button */}
-                        <div className="flex flex-col w-full lg:w-2/3">
-                            <h3 className="font-garamond font-bold text-[24px] lg:text-[32px] leading-[32px] lg:leading-[48px] tracking-[-2%] text-[#7E1835]">
-                                Due Diligence Services
-                            </h3>
-                            <div className="flex flex-col lg:flex-row items-start lg:items-center w-full justify-between gap-3 lg:gap-0">
-                                <span className="text-[14px] lg:text-[16px] font-outfit font-medium text-[#7E1835] w-full lg:w-[611px] leading-[180%] lg:leading-[240%]">
-                                    We provide thorough legal due diligence for mergers,
-                                    acquisitions, real estate transactions, and regulatory
-                                    compliance.
-                                </span>
-
-                                {/* Route Button */}
-                                <Link
-                                    to="/diligence"
-                                    className="flex-shrink-0 bg-[#ECDCE1] text-[#7E1835] rounded-full p-2 self-end lg:self-auto"
-                                >
-                                    <ArrowRight />
-                                </Link>
-                            </div>
-
-                            {/* Hover Image */}
-                            <div
-                                className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 mt-4"
-                            >
-                                <img
-                                    src={practicebook}
-                                    alt="Placeholder"
-                                    className="object-cover h-[173px] w-full mb-2"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Practices />
             </section>
 
 
