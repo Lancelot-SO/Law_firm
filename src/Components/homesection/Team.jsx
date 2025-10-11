@@ -201,7 +201,7 @@ export default function Team() {
                                     transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                                 >
                                     <motion.div
-                                        className="h-64 md:h-[400px] lg:h-full overflow-hidden rounded-lg bg-gray-200"
+                                        className="h-auto md:h-[400px] lg:h-full overflow-hidden rounded-lg bg-gray-200"
                                         whileHover={{ scale: 1.02 }}
                                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                     >
@@ -209,7 +209,6 @@ export default function Team() {
                                             src={attorneys[selectedAttorney].image2 || "/placeholder.svg"}
                                             alt={attorneys[selectedAttorney].name}
                                             width={400}
-                                            height={600}
                                             className="h-full md:h-full w-full object-cover"
                                             loading="lazy"
                                         />
