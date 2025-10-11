@@ -3,6 +3,15 @@ import React, { useState } from "react";
 import { ExternalLink, X, Facebook, Instagram, Twitter } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import Akuffo1 from "../../assets/team/akuffo1.jpg"
+import Akuffo2 from "../../assets/team/akuffo2.jpg"
+import Audrey1 from "../../assets/team/audrey1.jpg"
+import Audrey2 from "../../assets/team/audrey2.jpg"
+import Yvonne1 from "../../assets/team/yvonne1.jpg"
+import Yvonne2 from "../../assets/team/yvonne2.jpg"
+
+
+
 export default function Team() {
     const [selectedAttorney, setSelectedAttorney] = useState(null);
 
@@ -11,7 +20,8 @@ export default function Team() {
             name: "Kwame Boafo Akuffo",
             email: "Kwame@kbakuffo.com",
             title: "PARTNER",
-            image: "/smiling-black-professional.png",
+            image: Akuffo1,
+            image2: Akuffo2,
             background: `Kwame Boafo Akuffo was called to the Ghana Bar in October 1998. He spent 18 years with the prestigious firm of Akufo-Addo, Prempeh & Co., one of Ghana’s foremost legal chambers known for its full-service offering and international reputation. During his tenure, he was involved in major litigation and advisory matters, working with global law firms and representing international clients. He was also part of the distinguished legal team that represented H.E. Nana Akufo-Addo in the landmark 2013 Presidential Election Petition case.`,
             education: `Kwame is an alumnus of Achimota School and studied law at the University of Ghana and the Ghana School of Law. He holds a Master of Laws (LL.M) in International Finance and Commercial Law from King’s College London. His education and global exposure position him as a thought leader in the evolving legal and regulatory landscape.`,
             practice: `Kwame’s core areas of expertise include commercial litigation, constitutional law, and transactional advisory. He is known for his courtroom precision, deep legal insight, and strategic thinking in high-stakes disputes and commercial negotiations. His practice spans financial institutions, corporate clients, public figures, and cross-border entities.`,
@@ -25,7 +35,8 @@ export default function Team() {
             name: "Audrey Twum",
             email: "audrey@kbakuffo.com",
             title: "PARTNER",
-            image: "/professional-woman-teal-blazer.png",
+            image: Audrey1,
+            image2: Audrey2,
             background: `Audrey Twum brings over two decades of legal experience across both the UK and Ghana. She was called to the English Bar by the Honourable Society of Gray’s Inn in 2000 and to the Ghana Bar in 2009. Trained in London, Audrey has worked extensively in secured lending, property finance, and commercial property law. She joined Kwame Akuffo & Co. Unlimited in 2019, bringing with her a strong foundation in transactional work, corporate advisory, and civil litigation.`,
             education: `Audrey is an alumna of Achimota School and earned her LL.B (Hons) from the University of Wolverhampton. She pursued her legal training at the Inns of Court Law School, City University London, and later completed an LL.M in International Transport and Maritime Law at London Metropolitan University. She is currently advancing her expertise through a Postgraduate Diploma in Governance, Risk, and Compliance.`,
             practice: `Audrey’s practice spans real estate development, commercial transactions, and corporate structuring. She is highly skilled in drafting shareholder agreements, interpreting contracts, conducting legal due diligence, and advising financial institutions on their loan portfolios. Known for her meticulous approach and strong legal reasoning, Audrey plays a central role in the firm’s transactional and advisory practice.`,
@@ -39,7 +50,8 @@ export default function Team() {
             name: "Yvonne Akuffo-Addo",
             email: "yvonne@kbakuffo.com",
             title: "PARTNER",
-            image: "/professional-woman-blazer-pearls.png",
+            image: Yvonne1,
+            image2: Yvonne2,
             background: `Yvonne Akuffo-Addo was called to the Ghana Bar in October 2010 and began her legal career at Kuenyehia & Nutsukpui Legal Practitioners & Notaries. There, she gained extensive experience in litigation and negotiation across multiple areas of practice. Over a seven-year period, she worked on cases involving labour law, intellectual property, family law, tax, and arbitration - shaping her into a well-rounded and versatile practitioner. She currently serves as Secretary to the Ghana Bar Association’s Women and Minor Rights Committee.`,
             education: `Yvonne is a graduate of Akosombo International School and holds two first degrees: a Bachelor of Science in Biological Sciences from the University of Cape Coast, and a Bachelor of Laws from the University of Ghana. She obtained her Postgraduate Diploma in Law from the Ghana School of Law and is a member of both the Ghana Bar Association and the International Bar Association.`,
             practice: `Yvonne’s practice spans employment law, family law, corporate and commercial litigation, and intellectual property. She brings strong advocacy and negotiation skills to every matter, whether advising clients on sensitive personal issues or representing businesses in high-stakes disputes. Her cross-disciplinary background and leadership within the legal community reflect her commitment to both the profession and the people it serves.`,
@@ -194,7 +206,7 @@ export default function Team() {
                                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                     >
                                         <img
-                                            src={attorneys[selectedAttorney].image || "/placeholder.svg"}
+                                            src={attorneys[selectedAttorney].image2 || "/placeholder.svg"}
                                             alt={attorneys[selectedAttorney].name}
                                             width={400}
                                             height={600}
