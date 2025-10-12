@@ -44,7 +44,7 @@ export default function Navbar() {
                                 to={link.path}
                                 end
                                 className={({ isActive }) =>
-                                    `relative font-medium text-[16px] transition-colors duration-200 ${isActive ? "text-[#F5F5DC] underline" : "text-gray-300 hover:text-white"
+                                    `relative font-medium text-[16px] transition-colors duration-200 ${isActive ? "text-[#F5F5DC] underline decoration-[#7E1835] underline-offset-[6px]" : "text-gray-300 hover:text-white"
                                     }`
                                 }
                             >
