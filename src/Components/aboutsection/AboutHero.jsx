@@ -126,7 +126,7 @@ const AboutHero = () => {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             T
                         </span>
-                        <span>rusted. Experienced. Leading.</span>
+                        <span className='font-garamond'>rusted. Experienced. Leading.</span>
                     </motion.h1>
 
                     <motion.p

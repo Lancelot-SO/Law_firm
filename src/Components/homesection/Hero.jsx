@@ -131,7 +131,7 @@ const Hero = () => {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             L
                         </span>
-                        <span> egal Matters. Peace of Mind Matters More.</span>
+                        <span className='font-garamond'> egal Matters. Peace of Mind Matters More.</span>
                     </motion.h1>
 
                     <motion.p

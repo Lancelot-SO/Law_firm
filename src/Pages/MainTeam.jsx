@@ -126,7 +126,7 @@ const MainTeam = () => {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             M
                         </span>
-                        <span> eet the Team Behind the Briefs</span>
+                        <span className='font-garamond'> eet the Team Behind the Briefs</span>
                     </motion.h1>
 
                     <motion.p

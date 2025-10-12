@@ -123,7 +123,7 @@ const Consult = () => {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             Y
                         </span>
-                        <span> our problem is quite literally our business.</span>
+                        <span className='font-garamond'> our problem is quite literally our business.</span>
                     </motion.h1>
 
                     <motion.p
