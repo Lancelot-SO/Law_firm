@@ -46,7 +46,7 @@ const Hero = () => {
                 />
 
                 <motion.div
-                    className="absolute top-[211px] left-12 4xl:left-32 md:w-[561px] lg:w-[800px] md:h-[157px] lg:h-[310px] flex flex-col justify-between"
+                    className="absolute top-[211px] md:top-[181px] left-12 4xl:left-32 md:w-[561px] lg:w-[800px] md:h-[157px] lg:h-[310px] flex flex-col justify-between"
                     variants={itemVariants}
                 >
                     <span className="font-garamond font-normal lg:leading-[70px] md:leading-[50px] tracking-[-4%]">

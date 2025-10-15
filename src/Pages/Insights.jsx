@@ -38,7 +38,7 @@ const Insights = () => {
                 />
 
                 <motion.div
-                    className="absolute top-[211px] left-12 4xl:left-32 md:w-[561px] lg:w-[791px] h-[310px] flex flex-col justify-between"
+                    className="absolute top-[211px] md:top-[181px] left-12 4xl:left-32 md:w-[561px] lg:w-[791px] h-[310px] flex flex-col justify-between"
                     variants={itemVariants}
                 >
                     <span className="font-garamond font-normal leading-[70px] tracking-[-4%]">

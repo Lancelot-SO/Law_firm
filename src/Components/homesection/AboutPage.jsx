@@ -42,7 +42,7 @@ export default function AboutPage() {
                     >
                         <motion.div
                             variants={fadeInUp}
-                            className="flex items-center justify-center md:justify-start gap-2 text-[12px] tracking-[0.18em]"
+                            className="flex items-center justify-start md:justify-start gap-2 text-[12px] tracking-[0.18em]"
                         >
                             <span
                                 className="inline-block h-2 w-2 rounded-full bg-[#7E1835]"
@@ -53,7 +53,7 @@ export default function AboutPage() {
 
                         <motion.h1
                             variants={fadeInUp}
-                            className="text-center font-garamond text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#7E1835]"
+                            className="md:text-center text-left font-garamond text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#7E1835]"
                         >
                             Our Story Starts With Yours
                         </motion.h1>
@@ -118,31 +118,34 @@ export default function AboutPage() {
                             ))}
 
                             {/* Stats & CTA */}
-                            <motion.div variants={fadeIn} className="mt-6 flex flex-col items-start gap-4">
-                                <div className="flex flex-wrap items-center gap-3">
+                            <motion.div
+                                variants={fadeIn}
+                                className="mt-6 flex flex-row flex-wrap items-center gap-2 sm:flex-col sm:items-start sm:gap-4"
+                            >
+                                <div className="flex flex-row flex-wrap items-center gap-2 sm:gap-3">
                                     <motion.div
                                         variants={fadeInUp}
-                                        className="flex items-center gap-2 border px-3 py-2 bg-[#7E1835]"
+                                        className="flex items-center gap-2 border px-2.5 py-1.5 bg-[#7E1835] sm:px-3 sm:py-2"
                                     >
-                                        <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
-                                            <Award className="h-4 w-4" />
+                                        <div className="inline-flex h-[28px] w-[28px] items-center justify-center rounded-full bg-white/10 text-white sm:h-8 sm:w-8">
+                                            <Award className="h-[14px] w-[14px] sm:h-4 sm:w-4" />
                                         </div>
                                         <div className="leading-tight">
-                                            <div className="text-sm font-semibold text-white">25+</div>
-                                            <div className="text-[11px] text-white">Years Experience</div>
+                                            <div className="text-xs font-semibold text-white sm:text-sm">25+</div>
+                                            <div className="text-[10px] text-white sm:text-[11px]">Years Experience</div>
                                         </div>
                                     </motion.div>
 
                                     <motion.div
                                         variants={fadeInUp}
-                                        className="flex items-center gap-2 border px-6 py-2 bg-[#F2E8EB]"
+                                        className="flex items-center gap-2 border px-3.5 py-1.5 bg-[#F2E8EB] sm:px-6 sm:py-2"
                                     >
-                                        <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#7E1835]/10 text-[#7E1835]">
-                                            <CheckCircle2 className="h-4 w-4" />
+                                        <div className="inline-flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#7E1835]/10 text-[#7E1835] sm:h-8 sm:w-8">
+                                            <CheckCircle2 className="h-[14px] w-[14px] sm:h-4 sm:w-4" />
                                         </div>
                                         <div className="leading-tight">
-                                            <div className="text-sm font-semibold">98%</div>
-                                            <div className="text-[11px] text-gray-500">Case Success</div>
+                                            <div className="text-xs font-semibold sm:text-sm">98%</div>
+                                            <div className="text-[10px] text-gray-500 sm:text-[11px]">Case Success</div>
                                         </div>
                                     </motion.div>
                                 </div>
@@ -155,13 +158,17 @@ export default function AboutPage() {
                                         transition: { duration: prefersReducedMotion ? 0 : 0.45 },
                                     }}
                                     viewport={{ once: true, amount: 0.3 }}
-                                    className="mt-4"
+                                    className="mt-2 sm:mt-4"
                                 >
-                                    <Link to="/about" className="w-full sm:w-auto bg-[#7E1835] px-10 py-4 text-white hover:bg-[#6b1824] focus:outline-none">
+                                    <Link
+                                        to="/about"
+                                        className="w-auto bg-[#7E1835] px-6 py-3 text-sm text-white hover:bg-[#6b1824] focus:outline-none sm:w-full sm:px-10 sm:py-4 sm:text-base"
+                                    >
                                         Read More
                                     </Link>
                                 </motion.div>
                             </motion.div>
+
                         </motion.div>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ const testimonials = [
     {
         id: 1,
         quote:
-            "Working With Kwame Akuffo & Co. Has Been A Transformative Experience For Our Legal Department. Their Team Doesn't Just Offer Legal Advice—They Immerse Themselves In The Intricacies Of Our Business, Asking The Right Questions And Offering Insights That Help Us Stay Ahead Of Challenges Before They Arise. It's Rare To Find A Law Firm That Blends Legal Precision With Such Practical Commercial Acumen.",
+            "Working with Kwame Akuffo & Co. has been a transformative experience for our legal department. Their team doesn't just offer legal advice — they immerse themselves in the intricacies of our business, asking the right questions and offering insights that help us stay ahead of challenges before they arise. It's rare to find a law firm that blends legal precision with such practical commercial acumen.",
         name: "Sarah Johnson",
         position: "Group Legal Advisor, National Trust Holding Company",
         company: "Managing Director, Accra Mall / Junction Mall",

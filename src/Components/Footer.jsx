@@ -28,7 +28,7 @@ export default function Footer() {
             >
                 <div className="mx-auto flex flex-col md:flex-row justify-between items-start">
                     <div className="space-y-6">
-                        <h1 className="text-4xl font-garamond text-white mb-8 pb-2 border-b-2 border-dashed border-[#7E1835]">
+                        <h1 className="text-3xl font-garamond text-white mb-8 pb-2 border-b-2 border-dashed border-[#7E1835]">
                             Get In Touch With Us
                         </h1>
                         <div className="space-y-4 text-white">
@@ -99,7 +99,7 @@ export default function Footer() {
 
                         {/* Menus: stack & right-align on mobile; spread & left-align on lg */}
                         <div className="sm:col-span-1 lg:col-span-3">
-                            <div className="grid grid-cols-1 gap-8 text-left lg:grid-cols-3 lg:text-center md:max-w-4xl ">
+                            <div className="grid grid-cols-1 gap-8 text-left md:grid-cols-3 md:text-center md:max-w-4xl ">
                                 {/* Who We Are */}
                                 <div>
                                     <h3 className="text-lg font-medium font-garamond mb-4 underline underline-offset-4">
@@ -174,15 +174,7 @@ export default function Footer() {
                                                 Privacy Policy
                                             </button>
                                         </li>
-                                        <li>
-                                            {/* Hook this up if/when you add a Cookies modal/route */}
-                                            <a
-                                                href="#cookies"
-                                                className="text-red-100 hover:text-white hover:underline transition-colors"
-                                            >
-                                                Cookies Policy
-                                            </a>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>

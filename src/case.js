@@ -3,12 +3,12 @@ import Case from "./assets/case/case.png"
 
 export const caseTags = [
     { id: "all", name: "ALL" },
-    { id: "litigation", name: "Litgation & Publication" },
-    { id: "diligence", name: "Due Diligence" },
-    { id: "estate", name: "Real Estate " },
-    { id: "finance", name: "Finance" },
-    { id: "commercial", name: "Commercial" },
-    { id: "properties", name: "Properties" },
+    { id: "Litigation", name: "Litgation & Publication" },
+    { id: "Diligence", name: "Due Diligence" },
+    { id: "Estate", name: "Real Estate " },
+    { id: "Finance", name: "Finance" },
+    { id: "Commercial", name: "Commercial" },
+    { id: "Properties", name: "Properties" },
 ]
 
 // src/case/caseData.js
@@ -20,7 +20,7 @@ const caseData = [
         date: "February 24, 2025",
         excerpt: 'Guided an international family through the legal complexities of cross-border inheritance, resulting in an amicable settlement and clear estate division.',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
-        tags: 'litigation',
+        tags: 'Litigation',
 
     },
     {
@@ -30,7 +30,7 @@ const caseData = [
         date: "March 24, 2025",
         excerpt: 'Advised a tech startup on IP rights and executed a successful cease-and-desist action to stop unauthorized use of proprietary software.',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
-        tags: 'diligence',
+        tags: 'Diligence',
 
     },
     {
@@ -40,7 +40,7 @@ const caseData = [
         date: "April 24, 2025",
         excerpt: 'Our litigation team successfully defended a public official in a case that tested the limits of constitutional interpretation and due process.',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
-        tags: 'litigation',
+        tags: 'Litigation',
 
     },
     {
@@ -50,7 +50,7 @@ const caseData = [
         date: "April 25, 2025",
         excerpt: 'Took legal action against a government agency for unfair disqualification in a public tender process—leading to a reversal and fair reconsideration.',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
-        tags: 'estate',
+        tags: 'Estate',
 
     },
     {
@@ -60,7 +60,7 @@ const caseData = [
         date: "April 26, 2025",
         excerpt: 'Represented a large energy company in resolving a union-led labour dispute, avoiding a prolonged strike and maintaining operations.',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
-        tags: 'commercial',
+        tags: 'Commercial',
 
     },
     {
@@ -70,7 +70,7 @@ const caseData = [
         date: "April 26, 2025",
         excerpt: 'Provided strategic legal advisory to a major financial institution undergoing regulatory audits, ensuring compliance and avoidance of sanctions',
         content: `In an age of digital overload, physical brand experiences still create the deepest connections`,
-        tags: 'finance',
+        tags: 'Finance',
 
     },
 ];

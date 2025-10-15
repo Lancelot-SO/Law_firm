@@ -57,7 +57,7 @@ export default function PracticalSection() {
                             variants={fadeUp}
                         >
                             <span className="mr-3 h-2 w-2 rounded-full bg-red-900"></span>
-                            OUR PRACTICAL AREA
+                            OUR AREA OF PRACTICE
                         </motion.h2>
                     </aside>
 
