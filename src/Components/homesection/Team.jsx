@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { ExternalLink, X, Facebook, Instagram, Twitter } from "lucide-react";
+import { ExternalLink, X, Facebook, Instagram } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 import Akuffo1 from "../../assets/team/akuffo1.jpg"
 import Akuffo2 from "../../assets/team/akuffo2.jpg"
@@ -248,7 +250,7 @@ export default function Team() {
                                                             ? Facebook
                                                             : platform === "instagram"
                                                                 ? Instagram
-                                                                : Twitter;
+                                                                : FaXTwitter;
                                                     return (
                                                         <motion.a
                                                             key={index}

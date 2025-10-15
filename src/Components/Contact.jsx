@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Facebook, Instagram, Twitter, Send } from "lucide-react";
+import { Facebook, Instagram, Send } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 export default function ContactSection() {
     const services = [
@@ -120,7 +122,7 @@ export default function ContactSection() {
                                         aria-label="Twitter/X"
                                         className="w-10 h-10 bg-white rounded-full flex items-center justify-center transform transition-all duration-200 hover:scale-110 hover:shadow-md cursor-pointer"
                                     >
-                                        <Twitter className="w-5 h-5 text-[#7E1835]" />
+                                        <FaXTwitter className="w-5 h-5 text-[#7E1835]" />
                                     </a>
                                 </div>
                             </div>
