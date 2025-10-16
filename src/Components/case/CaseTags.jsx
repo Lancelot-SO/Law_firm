@@ -5,17 +5,28 @@ import { motion } from "framer-motion";
 
 const tags = [
     { id: "all", name: "ALL" },
-    { id: "Litigation", name: "Litgation & Publication" },
+    { id: "Litigation", name: "Litigation & Publication" },
     { id: "Diligence", name: "Due Diligence" },
-    { id: "real_estate", name: "Real Estate " },
-    { id: "finance", name: "Finance" },
-    { id: "Commercial", name: "Commercial" },
-    { id: "Properties", name: "Properties" },
+    { id: "real_estate", name: "real_estate" },
+    { id: "finance", name: "finance" },
+    { id: "Commercial", name: "commercial" },
+    { id: "Properties", name: "properties" },
 ];
 
 export default function CaseTags() {
     const [activeTag, setActiveTag] = useState("all");
     const [searchQuery, setSearchQuery] = useState("");
+
+    // Helper to format tag name for display
+    const formatTagName = (name) => {
+        return name
+            .replace(/_/g, " ")              // replace underscores with spaces
+            .split(" ")                      // split into words
+            .map((word) =>                   // capitalize each word
+                word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+            )
+            .join(" ");
+    };
 
     return (
         <div>
@@ -28,10 +39,12 @@ export default function CaseTags() {
                             <motion.button
                                 key={tag.id}
                                 onClick={() => setActiveTag(tag.id)}
-                                className={`pb-2 text-sm font-medium font-garamond transition-colors ${activeTag === tag.id ? "text-[#7E1835]" : "text-gray-500"
+                                className={`pb-2 text-sm font-medium font-garamond transition-colors ${activeTag === tag.id
+                                    ? "text-[#7E1835]"
+                                    : "text-gray-500"
                                     }`}
                             >
-                                {tag.name}
+                                {formatTagName(tag.name)}
                                 {activeTag === tag.id && (
                                     <motion.div
                                         layoutId="underline"

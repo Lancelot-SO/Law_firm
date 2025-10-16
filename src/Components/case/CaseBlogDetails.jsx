@@ -4,12 +4,22 @@ import { motion } from "framer-motion"
 import { FaPhoneAlt } from "react-icons/fa"
 import { IoIosMail } from "react-icons/io"
 import casebg from "../../assets/case/casebg.png"
-import ReactMarkdown from "react-markdown"
+// import ReactMarkdown from "react-markdown"
 import useCaseStudies from "../../hooks/useCaseStudies"
 
 export default function CaseBlogDetails() {
     const { id } = useParams()
     const { cases, loading, error } = useCaseStudies()
+
+    // Helper to format tag/category name
+    const formatTagName = (name) => {
+        if (!name) return "";
+        return name
+            .replace(/_/g, " ")
+            .split(" ")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(" ");
+    };
 
     const post = cases.find((item) => item.id === parseInt(id))
 
@@ -210,16 +220,16 @@ export default function CaseBlogDetails() {
                         className="text-sm text-gray-500 mb-8"
                         variants={itemVariants}
                     >
-                        {post.published_on} • {post.category}
+                        {post.published_on} • {formatTagName(post.category)}
                     </motion.p>
 
                     {/* Case Content */}
                     <motion.div
                         className="prose max-w-none text-gray-700 leading-relaxed"
                         variants={itemVariants}
-                    >
-                        <ReactMarkdown>{post.body}</ReactMarkdown>
-                    </motion.div>
+                        dangerouslySetInnerHTML={{ __html: post.body }}
+                    />
+
                 </motion.div>
 
                 {/* Right: Sidebar */}

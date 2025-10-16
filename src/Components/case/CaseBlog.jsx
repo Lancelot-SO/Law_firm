@@ -9,6 +9,16 @@ export default function CaseBlog({ activeTag, searchQuery }) {
     if (loading) return <p className="text-center text-gray-500 py-12">Loading case studies...</p>
     if (error) return <p className="text-center text-red-500">{error}</p>
 
+    // Helper to format tag/category name
+    const formatTagName = (name) => {
+        if (!name) return "";
+        return name
+            .replace(/_/g, " ")
+            .split(" ")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(" ");
+    };
+
     // Filtering logic (based on your design)
     const filteredPosts = cases.filter((post) => {
         const matchesTag = activeTag === "all" || post.category.toLowerCase() === activeTag.toLowerCase()
@@ -59,7 +69,7 @@ export default function CaseBlog({ activeTag, searchQuery }) {
                             <motion.div
                                 className="absolute top-8 right-8 bg-white px-4 py-2 group-hover:text-[#7E1835] text-[#7E1835] font-medium font-garamond rounded-[30px]"
                             >
-                                {post.category || "Uncategorized"}
+                                {formatTagName(post.category)}
                             </motion.div>
 
                             {/* Content */}
