@@ -1,18 +1,39 @@
 /* eslint-disable react/no-unescaped-entities */
-// src/case/CaseStudyDetails.jsx
 import { useParams, Link } from "react-router-dom"
-import caseData from "../../case"
-import { motion } from 'framer-motion'
-import { FaPhoneAlt } from 'react-icons/fa'
-import { IoIosMail } from 'react-icons/io'
+import { motion } from "framer-motion"
+import { FaPhoneAlt } from "react-icons/fa"
+import { IoIosMail } from "react-icons/io"
 import casebg from "../../assets/case/casebg.png"
 import ReactMarkdown from "react-markdown"
-
-
+import useCaseStudies from "../../hooks/useCaseStudies"
 
 export default function CaseBlogDetails() {
     const { id } = useParams()
-    const post = caseData.find((item) => item.id === parseInt(id))
+    const { cases, loading, error } = useCaseStudies()
+
+    const post = cases.find((item) => item.id === parseInt(id))
+
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.3,
+            },
+        },
+    }
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+    }
+
+    if (loading) {
+        return <p className="text-center text-gray-500 py-12">Loading case study...</p>
+    }
+
+    if (error) {
+        return <p className="text-center text-red-500 py-12">{error}</p>
+    }
 
     if (!post) {
         return (
@@ -25,20 +46,6 @@ export default function CaseBlogDetails() {
                 </Link>
             </div>
         )
-    }
-
-    const containerVariants = {
-        hidden: {},
-        visible: {
-            transition: {
-                staggerChildren: 0.3
-            }
-        }
-    }
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
     }
 
     return (
@@ -72,7 +79,9 @@ export default function CaseBlogDetails() {
                             className="font-garamond font-normal leading-[70px] tracking-[-4%] text-[60px] text-white"
                             variants={itemVariants}
                         >
-                            <span className='font-garamond'>ase Studies: Legal Strategy in Action.</span>
+                            <span className="font-garamond">
+                                ase Studies: Legal Strategy in Action.
+                            </span>
                         </motion.span>
                     </span>
 
@@ -80,16 +89,8 @@ export default function CaseBlogDetails() {
                         className="w-[535px] text-[12px] leading-5 font-normal text-white"
                         variants={itemVariants}
                     >
-                        At Kwame Akuffo & Co., our work speaks through results. These case studies showcase how we've helped Clients overcome complex legal challenges with clarity, precision, and strategic insight. From high-stakes litigation to sensitive negotiations, explore how our legal expertise delivers real-world impact.                         </motion.span>
-
-                    {/* <motion.div variants={itemVariants}>
-                        <Link
-                            to="/contact"
-                            className="bg-[#7E1835] text-white w-[122px] h-[39px] flex items-center justify-center text-[10px] font-bold leading-[15px] tracking-[1%]"
-                        >
-                            Practice Area
-                        </Link>
-                    </motion.div> */}
+                        At Kwame Akuffo & Co., our work speaks through results. These case studies showcase how we've helped clients overcome complex legal challenges with clarity, precision, and strategic insight.
+                    </motion.span>
                 </motion.div>
 
                 <motion.div
@@ -112,7 +113,7 @@ export default function CaseBlogDetails() {
                         </div>
                         <div className="flex flex-col text-white">
                             <span className="underline">Email Us:</span>
-                            <span>Kwame@kbakuffo.com</span>
+                            <span>info@kbakuffo.com</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -142,24 +143,17 @@ export default function CaseBlogDetails() {
                         <span className="font-garamond font-semibold text-[#7E1835] text-[60px]">
                             C
                         </span>
-                        <span className='font-garamond'> ase Studies: Legal Strategy in Action.</span>
+                        <span className="font-garamond">
+                            ase Studies: Legal Strategy in Action.
+                        </span>
                     </motion.h1>
 
                     <motion.p
                         className="text-white text-sm sm:text-base leading-relaxed"
                         variants={itemVariants}
                     >
-                        At Kwame Akuffo & Co., our work speaks through results. These case studies showcase how we've helped Clients overcome complex legal challenges with clarity, precision, and strategic insight. From high-stakes litigation to sensitive negotiations, explore how our legal expertise delivers real-world impact.
+                        At Kwame Akuffo & Co., our work speaks through results. These case studies showcase how we've helped clients overcome complex legal challenges with clarity, precision, and strategic insight.
                     </motion.p>
-
-                    {/* <motion.div variants={itemVariants}>
-                        <Link
-                            to="/contact"
-                            className="bg-[#7E1835] text-white inline-block px-5 py-2 text-xs sm:text-sm font-bold rounded"
-                        >
-                            Practice Area
-                        </Link>
-                    </motion.div> */}
 
                     <motion.div
                         className="mt-8 flex flex-col sm:flex-row sm:gap-8 gap-4"
@@ -181,12 +175,13 @@ export default function CaseBlogDetails() {
                             </div>
                             <div>
                                 <div className="underline text-xs">Email Us:</div>
-                                <div className="text-xs">Kwame@kbakuffo.com</div>
+                                <div className="text-xs">info@kbakuffo.com</div>
                             </div>
                         </div>
                     </motion.div>
                 </div>
             </motion.div>
+
             {/* Main Content Area */}
             <section className="px-4 lg:px-12 4xl:px-32 py-12 grid grid-cols-1 lg:grid-cols-3 gap-12">
                 {/* Left: Article Content */}
@@ -196,9 +191,9 @@ export default function CaseBlogDetails() {
                     initial="hidden"
                     animate="visible"
                 >
-                    {/* Featured Image */}
+                    {/* Featured Image (Placeholder since API has no image field) */}
                     <motion.img
-                        src={post.image}
+                        src={"/case-placeholder.png"}
                         alt={post.title}
                         className="w-full h-96 object-cover rounded-lg mb-8"
                         variants={itemVariants}
@@ -215,15 +210,15 @@ export default function CaseBlogDetails() {
                         className="text-sm text-gray-500 mb-8"
                         variants={itemVariants}
                     >
-                        {post.date} • {post.tags}
+                        {post.published_on} • {post.category}
                     </motion.p>
 
-                    {/* Case Content (Markdown Support) */}
+                    {/* Case Content */}
                     <motion.div
                         className="prose max-w-none text-gray-700 leading-relaxed"
                         variants={itemVariants}
                     >
-                        <ReactMarkdown>{post.content}</ReactMarkdown>
+                        <ReactMarkdown>{post.body}</ReactMarkdown>
                     </motion.div>
                 </motion.div>
 
@@ -251,7 +246,7 @@ export default function CaseBlogDetails() {
                         </h3>
 
                         <div className="space-y-5">
-                            {caseData.slice(0, 3).map((item, i) => (
+                            {cases.slice(0, 3).map((item, i) => (
                                 <motion.div
                                     key={item.id}
                                     initial={{ opacity: 0, y: 40 }}
@@ -261,11 +256,11 @@ export default function CaseBlogDetails() {
                                 >
                                     <Link
                                         to={`/case/${item.id}`}
-                                        className="block relative group  overflow-hidden shadow-md hover:shadow-lg transition"
+                                        className="block relative group overflow-hidden shadow-md hover:shadow-lg transition"
                                     >
-                                        {/* Background Image */}
+                                        {/* Background Image Placeholder */}
                                         <img
-                                            src={item.image}
+                                            src={"/case-placeholder.png"}
                                             alt={item.title}
                                             className="w-full h-40 md:h-[300px] lg:h-52 object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
