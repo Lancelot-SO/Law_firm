@@ -1,22 +1,46 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react"
-import insightsData from "../../main" // adjust path if needed
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 
 export default function Blogs({ activeTag, searchQuery }) {
+    const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
     const postsPerPage = 4
 
-    const filteredPosts = insightsData.filter((post) => {
+    // --- Fetch API ---
+    useEffect(() => {
+        fetch("https://ka-cms.interactivedigital.com.gh/api/blogs")
+            .then((res) => res.json())
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    setPosts(data)
+                } else {
+                    setPosts([])
+                }
+                setLoading(false)
+            })
+            .catch((err) => {
+                console.error("Error fetching blogs:", err)
+                setLoading(false)
+            })
+    }, [])
+
+    if (loading) {
+        return <p className="text-center text-gray-500 mt-10">Loading blogs...</p>
+    }
+
+    // --- Filtering ---
+    const filteredPosts = posts.filter((post) => {
         const matchesTag =
-            activeTag === "ALL" || post.tags.toLowerCase() === activeTag.toLowerCase()
+            activeTag === "ALL" ||
+            post.category?.toLowerCase().replace("_", " ") === activeTag.toLowerCase()
         const matchesSearch =
-            post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
+            post.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase())
         return matchesTag && matchesSearch
     })
-
 
     // Pagination logic
     const indexOfLastPost = currentPage * postsPerPage
@@ -24,16 +48,17 @@ export default function Blogs({ activeTag, searchQuery }) {
     const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost)
     const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
 
-    // For sidebar
-    const latestPosts = insightsData.slice(0, 3)
-    const popularPosts = [...insightsData]
-        .sort((a, b) => (b.views || 0) - (a.views || 0)) // safe fallback if views missing
-        .slice(0, 3)
+    // Sort for sidebars
+    const latestPosts = [...posts].sort(
+        (a, b) => new Date(b.published_on) - new Date(a.published_on)
+    ).slice(0, 3)
+
+    const popularPosts = [...posts].slice(0, 3) // (adjust if CMS supports views)
 
     return (
         <div className="min-h-screen bg-[#faf7f8] p-6">
             <div className="px-4 lg:px-12 4xl:px-32 mx-auto grid lg:grid-cols-3 gap-8">
-                {/* Left side (featured + grid + pagination) */}
+                {/* Left Section */}
                 <div className="lg:col-span-2">
                     {/* Featured Post */}
                     {currentPosts.length > 0 && (
@@ -45,10 +70,11 @@ export default function Blogs({ activeTag, searchQuery }) {
                             />
                             <div className="flex flex-col justify-center">
                                 <p className="text-sm text-[#7E1835] font-medium mb-2">
-                                    {currentPosts[0].tags} | {currentPosts[0].date}
+                                    {currentPosts[0].category?.replace("_", " ").toUpperCase()} |{" "}
+                                    {new Date(currentPosts[0].published_on).toLocaleDateString()}
                                 </p>
                                 <h2 className="text-2xl font-bold mb-3">{currentPosts[0].title}</h2>
-                                <p className="text-gray-600 mb-4">{currentPosts[0].excerpt}</p>
+                                <p className="text-gray-600 mb-4" dangerouslySetInnerHTML={{ __html: currentPosts[0].excerpt }} />
                                 <Link
                                     to={`/blog/${currentPosts[0].id}`}
                                     className="text-[#7E1835] font-medium hover:underline"
@@ -63,17 +89,14 @@ export default function Blogs({ activeTag, searchQuery }) {
                     <div className="grid md:grid-cols-3 gap-6 mb-10">
                         {currentPosts.slice(1).map((post) => (
                             <div key={post.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                                <img
-                                    src={post.image}
-                                    alt={post.title}
-                                    className="w-full h-48 object-cover"
-                                />
+                                <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
                                 <div className="p-4">
                                     <p className="text-xs text-[#7E1835] font-medium mb-1">
-                                        {post.tags} | {post.date}
+                                        {post.category?.replace("_", " ").toUpperCase()} |{" "}
+                                        {new Date(post.published_on).toLocaleDateString()}
                                     </p>
                                     <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
-                                    <p className="text-gray-600 text-sm mb-3">{post.excerpt}</p>
+                                    <p className="text-gray-600 text-sm mb-3" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
                                     <Link
                                         to={`/blog/${post.id}`}
                                         className="text-[#7E1835] text-sm font-medium hover:underline"
@@ -100,7 +123,7 @@ export default function Blogs({ activeTag, searchQuery }) {
                                     key={i + 1}
                                     onClick={() => setCurrentPage(i + 1)}
                                     className={`px-3 py-1 rounded ${currentPage === i + 1
-                                        ? "text-[#] font-bold"
+                                        ? "text-[#7E1835] font-bold"
                                         : "text-gray-500"
                                         }`}
                                 >
@@ -117,7 +140,6 @@ export default function Blogs({ activeTag, searchQuery }) {
                         </div>
                     )}
 
-                    {/* No results message */}
                     {filteredPosts.length === 0 && (
                         <p className="text-center text-gray-500 mt-10">No posts found.</p>
                     )}
@@ -146,18 +168,18 @@ export default function Blogs({ activeTag, searchQuery }) {
                         <h3 className="text-lg font-semibold mb-4">Latest Posts</h3>
                         <ul className="space-y-4">
                             {latestPosts.map((post) => (
-                                <Link to={`/blog/${post.id}`} key={post.id} className="flex flex-col items-start space-x-3">
-                                    <li className="flex items-center space-x-3">
-                                        <img
-                                            src={post.image}
-                                            alt={post.title}
-                                            className="w-16 h-16 object-cover rounded"
-                                        />
-                                        <div>
-                                            <h4 className="text-sm font-medium">{post.title}</h4>
-                                            <p className="text-xs text-gray-500">{post.date}</p>
-                                        </div>
-                                    </li>
+                                <Link to={`/blog/${post.id}`} key={post.id} className="flex items-center space-x-3">
+                                    <img
+                                        src={post.image}
+                                        alt={post.title}
+                                        className="w-16 h-16 object-cover rounded"
+                                    />
+                                    <div>
+                                        <h4 className="text-sm font-medium">{post.title}</h4>
+                                        <p className="text-xs text-gray-500">
+                                            {new Date(post.published_on).toLocaleDateString()}
+                                        </p>
+                                    </div>
                                 </Link>
                             ))}
                         </ul>
@@ -168,18 +190,18 @@ export default function Blogs({ activeTag, searchQuery }) {
                         <h3 className="text-lg font-semibold mb-4">Popular Posts</h3>
                         <ul className="space-y-4">
                             {popularPosts.map((post) => (
-                                <Link to={`/blog/${post.id}`} key={post.id} className="flex flex-col items-start space-x-3">
-                                    <li className="flex items-center space-x-3">
-                                        <img
-                                            src={post.image}
-                                            alt={post.title}
-                                            className="w-16 h-16 object-cover rounded"
-                                        />
-                                        <div>
-                                            <h4 className="text-sm font-medium">{post.title}</h4>
-                                            <p className="text-xs text-gray-500">{post.date}</p>
-                                        </div>
-                                    </li>
+                                <Link to={`/blog/${post.id}`} key={post.id} className="flex items-center space-x-3">
+                                    <img
+                                        src={post.image}
+                                        alt={post.title}
+                                        className="w-16 h-16 object-cover rounded"
+                                    />
+                                    <div>
+                                        <h4 className="text-sm font-medium">{post.title}</h4>
+                                        <p className="text-xs text-gray-500">
+                                            {new Date(post.published_on).toLocaleDateString()}
+                                        </p>
+                                    </div>
                                 </Link>
                             ))}
                         </ul>
