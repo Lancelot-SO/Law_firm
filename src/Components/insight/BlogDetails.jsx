@@ -13,19 +13,23 @@ export default function BlogDetails() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        // Fetch single blog
         const fetchBlog = fetch(`https://ka-cms.interactivedigital.com.gh/api/blogs/${id}`).then((res) =>
             res.json()
         )
-        // Fetch all blogs for sidebar
         const fetchAll = fetch(`https://ka-cms.interactivedigital.com.gh/api/blogs`).then((res) =>
             res.json()
         )
 
         Promise.all([fetchBlog, fetchAll])
             .then(([blogData, allData]) => {
-                setBlog(blogData)
-                setAllBlogs(allData)
+                console.log("Blog API result:", blogData) // debug
+
+                // handle API response structure safely
+                const single = blogData?.data || blogData[0] || blogData
+                const all = allData?.data || allData
+
+                setBlog(single)
+                setAllBlogs(all)
                 setLoading(false)
             })
             .catch((err) => {
@@ -43,7 +47,7 @@ export default function BlogDetails() {
         .slice(0, 3)
 
     const popularNews = [...allBlogs]
-        .sort(() => 0.5 - Math.random()) // no 'views' field — random fallback
+        .sort(() => 0.5 - Math.random())
         .slice(0, 3)
 
     const containerVariants = {
@@ -197,7 +201,7 @@ export default function BlogDetails() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.6 }}
                 >
-                    {blog.image ? (
+                    {blog.image_url ? (
                         <motion.img
                             src={blog.image_url}
                             alt={blog.title}
