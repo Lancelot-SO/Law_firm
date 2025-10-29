@@ -14,11 +14,8 @@ export default function Blogs({ activeTag, searchQuery }) {
         fetch("https://ka-cms.interactivedigital.com.gh/api/blogs")
             .then((res) => res.json())
             .then((data) => {
-                if (Array.isArray(data)) {
-                    setPosts(data)
-                } else {
-                    setPosts([])
-                }
+                const parsed = Array.isArray(data) ? data : data?.data || []
+                setPosts(parsed)
                 setLoading(false)
             })
             .catch((err) => {
@@ -26,6 +23,10 @@ export default function Blogs({ activeTag, searchQuery }) {
                 setLoading(false)
             })
     }, [])
+    // --- Scroll to top on mount or when pagination changes ---
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }, [currentPage])
 
     if (loading) {
         return <p className="text-center text-gray-500 mt-10">Loading blogs...</p>
@@ -49,11 +50,11 @@ export default function Blogs({ activeTag, searchQuery }) {
     const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
 
     // Sort for sidebars
-    const latestPosts = [...posts].sort(
-        (a, b) => new Date(b.published_on) - new Date(a.published_on)
-    ).slice(0, 3)
+    const latestPosts = [...posts]
+        .sort((a, b) => new Date(b.published_on) - new Date(a.published_on))
+        .slice(0, 3)
 
-    const popularPosts = [...posts].slice(0, 3) // (adjust if CMS supports views)
+    const popularPosts = [...posts].slice(0, 3)
 
     return (
         <div className="min-h-screen bg-[#faf7f8] p-6">
@@ -64,8 +65,8 @@ export default function Blogs({ activeTag, searchQuery }) {
                     {currentPosts.length > 0 && (
                         <div className="grid md:grid-cols-2 gap-6 mb-10 border-b pb-8">
                             <img
-                                src={currentPosts[0].image_url}
-                                alt={currentPosts[0].title}
+                                src={currentPosts[0].image_url || "/placeholder.jpg"}
+                                alt={currentPosts[0].title || "Blog image"}
                                 className="w-full h-80 object-cover rounded-lg"
                             />
                             <div className="flex flex-col justify-center">
@@ -74,9 +75,14 @@ export default function Blogs({ activeTag, searchQuery }) {
                                     {new Date(currentPosts[0].published_on).toLocaleDateString()}
                                 </p>
                                 <h2 className="text-2xl font-bold mb-3">{currentPosts[0].title}</h2>
-                                <p className="text-gray-600 mb-4" dangerouslySetInnerHTML={{ __html: currentPosts[0].excerpt }} />
+                                <p
+                                    className="text-gray-600 mb-4"
+                                    dangerouslySetInnerHTML={{
+                                        __html: currentPosts[0].excerpt || ""
+                                    }}
+                                />
                                 <Link
-                                    to={`/blog/${currentPosts[0].id}`}
+                                    to={`/blog/${currentPosts[0].slug}`}
                                     className="text-[#7E1835] font-medium hover:underline"
                                 >
                                     Read More
@@ -88,17 +94,29 @@ export default function Blogs({ activeTag, searchQuery }) {
                     {/* Grid of 3 smaller posts */}
                     <div className="grid md:grid-cols-3 gap-6 mb-10">
                         {currentPosts.slice(1).map((post) => (
-                            <div key={post.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                                <img src={post.image_url} alt={post.title} className="w-full h-48 object-cover" />
+                            <div
+                                key={post.slug}
+                                className="bg-white rounded-lg shadow-sm overflow-hidden"
+                            >
+                                <img
+                                    src={post.image_url || "/placeholder.jpg"}
+                                    alt={post.title || "Blog image"}
+                                    className="w-full h-48 object-cover"
+                                />
                                 <div className="p-4">
                                     <p className="text-xs text-[#7E1835] font-medium mb-1">
                                         {post.category?.replace("_", " ").toUpperCase()} |{" "}
                                         {new Date(post.published_on).toLocaleDateString()}
                                     </p>
                                     <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
-                                    <p className="text-gray-600 text-sm mb-3" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+                                    <p
+                                        className="text-gray-600 text-sm mb-3"
+                                        dangerouslySetInnerHTML={{
+                                            __html: post.excerpt || ""
+                                        }}
+                                    />
                                     <Link
-                                        to={`/blog/${post.id}`}
+                                        to={`/blog/${post.slug}`}
                                         className="text-[#7E1835] text-sm font-medium hover:underline"
                                     >
                                         Read More
@@ -168,10 +186,14 @@ export default function Blogs({ activeTag, searchQuery }) {
                         <h3 className="text-lg font-semibold mb-4">Latest Posts</h3>
                         <ul className="space-y-4">
                             {latestPosts.map((post) => (
-                                <Link to={`/blog/${post.id}`} key={post.id} className="flex items-center space-x-3">
+                                <Link
+                                    to={`/blog/${post.slug}`}
+                                    key={post.slug}
+                                    className="flex items-center space-x-3"
+                                >
                                     <img
-                                        src={post.image_url}
-                                        alt={post.title}
+                                        src={post.image_url || "/placeholder.jpg"}
+                                        alt={post.title || "Blog image"}
                                         className="w-16 h-16 object-cover rounded"
                                     />
                                     <div>
@@ -190,10 +212,14 @@ export default function Blogs({ activeTag, searchQuery }) {
                         <h3 className="text-lg font-semibold mb-4">Popular Posts</h3>
                         <ul className="space-y-4">
                             {popularPosts.map((post) => (
-                                <Link to={`/blog/${post.id}`} key={post.id} className="flex items-center space-x-3">
+                                <Link
+                                    to={`/blog/${post.slug}`}
+                                    key={post.slug}
+                                    className="flex items-center space-x-3"
+                                >
                                     <img
-                                        src={post.image_url}
-                                        alt={post.title}
+                                        src={post.image_url || "/placeholder.jpg"}
+                                        alt={post.title || "Blog image"}
                                         className="w-16 h-16 object-cover rounded"
                                     />
                                     <div>

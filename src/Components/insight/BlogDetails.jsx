@@ -7,13 +7,13 @@ import { IoIosMail } from "react-icons/io"
 import casebg from "../../assets/case/casebg.png"
 
 export default function BlogDetails() {
-    const { id } = useParams()
+    const { slug } = useParams()
     const [blog, setBlog] = useState(null)
     const [allBlogs, setAllBlogs] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const fetchBlog = fetch(`https://ka-cms.interactivedigital.com.gh/api/blogs/${id}`).then((res) =>
+        const fetchBlog = fetch(`https://ka-cms.interactivedigital.com.gh/api/blogs/${slug}`).then((res) =>
             res.json()
         )
         const fetchAll = fetch(`https://ka-cms.interactivedigital.com.gh/api/blogs`).then((res) =>
@@ -36,7 +36,12 @@ export default function BlogDetails() {
                 console.error("Error fetching blog:", err)
                 setLoading(false)
             })
-    }, [id])
+    }, [slug])
+
+    // --- Scroll to top on mount or when pagination changes ---
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }, [allBlogs])
 
     if (loading) return <p className="text-center text-gray-500 mt-10">Loading...</p>
     if (!blog) return <p className="text-center text-gray-500 mt-10">Blog not found.</p>
