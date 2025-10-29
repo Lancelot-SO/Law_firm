@@ -214,8 +214,8 @@ export default function BlogDetails() {
                     )}
 
                     <motion.p className="text-sm text-gray-500 mb-2">
-                        {blog.published_on
-                            ? new Date(blog.published_on).toLocaleDateString("en-GB", {
+                        {blog.created_at
+                            ? new Date(blog.created_at).toLocaleDateString("en-GB", {
                                 day: "numeric",
                                 month: "long",
                                 year: "numeric"
@@ -235,7 +235,7 @@ export default function BlogDetails() {
                         className="text-gray-700 leading-relaxed"
                         dangerouslySetInnerHTML={{
                             __html:
-                                blog.body ||
+                                blog.content ||
                                 "<p>Content not available for this article. Please check back later.</p>"
                         }}
                     />
