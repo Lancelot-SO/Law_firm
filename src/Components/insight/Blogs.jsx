@@ -64,7 +64,7 @@ export default function Blogs({ activeTag, searchQuery }) {
                     {currentPosts.length > 0 && (
                         <div className="grid md:grid-cols-2 gap-6 mb-10 border-b pb-8">
                             <img
-                                src={currentPosts[0].image}
+                                src={currentPosts[0].image_url}
                                 alt={currentPosts[0].title}
                                 className="w-full h-80 object-cover rounded-lg"
                             />
@@ -89,7 +89,7 @@ export default function Blogs({ activeTag, searchQuery }) {
                     <div className="grid md:grid-cols-3 gap-6 mb-10">
                         {currentPosts.slice(1).map((post) => (
                             <div key={post.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                                <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                                <img src={post.image_url} alt={post.title} className="w-full h-48 object-cover" />
                                 <div className="p-4">
                                     <p className="text-xs text-[#7E1835] font-medium mb-1">
                                         {post.category?.replace("_", " ").toUpperCase()} |{" "}
@@ -170,7 +170,7 @@ export default function Blogs({ activeTag, searchQuery }) {
                             {latestPosts.map((post) => (
                                 <Link to={`/blog/${post.id}`} key={post.id} className="flex items-center space-x-3">
                                     <img
-                                        src={post.image}
+                                        src={post.image_url}
                                         alt={post.title}
                                         className="w-16 h-16 object-cover rounded"
                                     />
@@ -192,7 +192,7 @@ export default function Blogs({ activeTag, searchQuery }) {
                             {popularPosts.map((post) => (
                                 <Link to={`/blog/${post.id}`} key={post.id} className="flex items-center space-x-3">
                                     <img
-                                        src={post.image}
+                                        src={post.image_url}
                                         alt={post.title}
                                         className="w-16 h-16 object-cover rounded"
                                     />

@@ -199,9 +199,9 @@ export default function BlogDetails() {
                 >
                     {blog.image ? (
                         <motion.img
-                            src={blog.image}
+                            src={blog.image_url}
                             alt={blog.title}
-                            className="w-full h-96 object-cover rounded-lg mb-6"
+                            className="w-full h-auto object-cover rounded-lg mb-6"
                         />
                     ) : (
                         <div className="w-full h-64 bg-gray-100 rounded-lg mb-6 flex items-center justify-center text-gray-400 text-sm">
@@ -222,6 +222,10 @@ export default function BlogDetails() {
                     <motion.h1 className="text-3xl font-bold mb-4">
                         {blog.title || "Untitled Blog"}
                     </motion.h1>
+
+                    <motion.p className="text-sm text-gray-500 mb-2">
+                        {blog.author_name || "Author"}
+                    </motion.p>
 
                     <motion.div
                         className="text-gray-700 leading-relaxed"
@@ -264,7 +268,7 @@ export default function BlogDetails() {
                             {latestNews.map((news) => (
                                 <div key={news.id} className="flex gap-3">
                                     <img
-                                        src={news.image || casebg}
+                                        src={news.image_url || casebg}
                                         alt={news.title}
                                         className="w-20 h-20 object-cover rounded"
                                     />
@@ -291,7 +295,7 @@ export default function BlogDetails() {
                             {popularNews.map((news) => (
                                 <div key={news.id} className="flex gap-3">
                                     <img
-                                        src={news.image || casebg}
+                                        src={news.image_url || casebg}
                                         alt={news.title}
                                         className="w-20 h-20 object-cover rounded"
                                     />
