@@ -1,51 +1,42 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import blockbg from "../../assets/home/blockbg.png"
-import { Link } from "react-router-dom";
-import blog1 from "../../assets/home/teambg.png"
-
-const blogPosts = [
-    {
-        id: 1,
-        title: "Prevent A Further Breach of The Peace In The States",
-        image: blog1,
-        category: "Legal Advice",
-        date: "Sunday, July 24, 2022",
-        excerpt:
-            "There are of Lorem Ipsum available, but majority have an alteration in some form, by injected or which don't look even slightly believable.",
-        link: "/blog/prevent-breach-peace-states",
-    },
-    {
-        id: 2,
-        title:
-            "The Importance Of Consistency In The Application Of The Principles Of Law",
-        image: blog1,
-        category: "Legal Advice",
-        date: "Sunday, July 24, 2022",
-        excerpt:
-            "The importance of consistency in the application of the principles of law is necessary so inconsistency fails to undermine the coherence of the law and generates a mass of disparate special rules...",
-        link: "/blog/importance-consistency-law-principles",
-    },
-    {
-        id: 3,
-        title: "The Contract - 1960 (Act 25) Has Seen A Recent Amendment.",
-        image: blog1,
-        category: "Legal Advice",
-        date: "Sunday, July 24, 2022",
-        excerpt:
-            "Section 7 of Act 25 has been amended by the Contract (Amendment) Act, 2022 - Act 1138. The Amendment addresses the category of persons who have capacity to contract...",
-        link: "/blog/contract-act-1960-amendment",
-    },
-];
 
 export default function BlogPage() {
+    const [blogs, setBlogs] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    // Fetch blogs from CMS
+    useEffect(() => {
+        fetch("https://ka-cms.interactivedigital.com.gh/api/blogs")
+            .then((res) => res.json())
+            .then((data) => {
+                const parsed = Array.isArray(data) ? data : data?.data || []
+                setBlogs(parsed)
+                setLoading(false)
+            })
+            .catch((err) => {
+                console.error("Error fetching blogs:", err)
+                setLoading(false)
+            })
+    }, [])
+
+    if (loading) {
+        return (
+            <div className="bg-[#7E1835] text-white flex justify-center items-center h-screen">
+                <p>Loading blog posts...</p>
+            </div>
+        )
+    }
+
     return (
-        <div className=" bg-[#7E1835]">
+        <div className="bg-[#7E1835]">
             {/* Hero Section */}
             <section className="relative px-4 lg:px-12 4xl:px-32 py-16 lg:py-24">
                 <div className="lg:max-w-8xl">
-                    <div className="flex flex-col lg:flex-row gap-16  items-center">
+                    <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="flex lg:items-center flex-col lg:flex-row lg:gap-20 gap-8">
                             <div className="flex items-center">
                                 <span className="mr-3 h-2 w-2 rounded-full bg-white" />
@@ -53,7 +44,7 @@ export default function BlogPage() {
                                     BLOG
                                 </span>
                             </div>
-                            <div className="">
+                            <div>
                                 <img
                                     src={blockbg}
                                     alt="Law library with vintage books"
@@ -80,51 +71,66 @@ export default function BlogPage() {
             {/* Blog Posts Grid */}
             <section className="px-4 lg:px-12 4xl:px-32 pb-16">
                 <div className="mx-auto">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {blogPosts.map((post) => (
-                            <Link
-                                key={post.id}
-                                to={post.link}
-                                className="p-4 group block bg-white shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
-                            >
-                                {/* Image */}
-                                <div className="h-48 w-full overflow-hidden mb-4">
-                                    <img
-                                        src={post.image}
-                                        alt={post.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
-                                </div>
-
-                                {/* Content */}
-                                <div className="flex flex-col flex-grow">
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <span className="text-xs font-medium text-[#7E1835]">
-                                            {post.category}
-                                        </span>
-                                        <div className="w-[1px] h-[12px] bg-[#7E1835]" />
-                                        <span className="text-sm text-[#7E1835]">{post.date}</span>
+                    {blogs.length === 0 ? (
+                        <p className="text-center text-white">No blog posts available.</p>
+                    ) : (
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {blogs.map((post) => (
+                                <Link
+                                    key={post.slug}
+                                    to={`/blog/${post.slug}`}
+                                    className="p-4 group block bg-white shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+                                >
+                                    {/* Image */}
+                                    <div className="h-48 w-full overflow-hidden mb-4">
+                                        <img
+                                            src={post.image_url || "/placeholder.jpg"}
+                                            alt={post.title}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
                                     </div>
 
-                                    <hr className="border-black my-2" />
+                                    {/* Content */}
+                                    <div className="flex flex-col flex-grow">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="text-xs font-medium text-[#7E1835]">
+                                                {(post.category || "General")
+                                                    .replace("_", " ")
+                                                    .toUpperCase()}
+                                            </span>
+                                            <div className="w-[1px] h-[12px] bg-[#7E1835]" />
+                                            <span className="text-sm text-[#7E1835]">
+                                                {post.published_on
+                                                    ? new Date(post.published_on).toLocaleDateString("en-GB", {
+                                                        day: "numeric",
+                                                        month: "long",
+                                                        year: "numeric"
+                                                    })
+                                                    : "Date unavailable"}
+                                            </span>
+                                        </div>
 
-                                    <h3 className="text-lg font-bold font-garamond text-gray-900 mb-2 group-hover:text-[#7E1835] transition-colors leading-snug">
-                                        {post.title}
-                                    </h3>
+                                        <hr className="border-black my-2" />
 
-                                    <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">
-                                        {post.excerpt}
-                                    </p>
+                                        <h3 className="text-lg font-bold font-garamond text-gray-900 mb-2 group-hover:text-[#7E1835] transition-colors leading-snug">
+                                            {post.title}
+                                        </h3>
 
-                                    <span className="text-[#7E1835] font-semibold text-sm mt-auto group-hover:underline">
-                                        Read More →
-                                    </span>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
+                                        <p
+                                            className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3"
+                                            dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                                        />
+
+                                        <span className="text-[#7E1835] font-semibold text-sm mt-auto group-hover:underline">
+                                            Read More →
+                                        </span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
         </div>
-    );
+    )
 }
