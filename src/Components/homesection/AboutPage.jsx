@@ -138,19 +138,18 @@ export default function AboutPage() {
 
                                     <motion.div
                                         variants={fadeInUp}
-                                        className="flex items-center gap-2 border px-3.5 py-1.5 bg-[#F2E8EB] sm:px-6 sm:py-2"
+                                        className="flex items-center gap-2 border px-3.5 py-1.5 bg-[#7E1835] hover:bg-[#7E1835]/90 sm:px-6 sm:py-2 text-white"
                                     >
-                                        <div className="inline-flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#7E1835]/10 text-[#7E1835] sm:h-8 sm:w-8">
-                                            <CheckCircle2 className="h-[14px] w-[14px] sm:h-4 sm:w-4" />
-                                        </div>
-                                        <div className="leading-tight">
-                                            <div className="text-xs font-semibold sm:text-sm">98%</div>
-                                            <div className="text-[10px] text-gray-500 sm:text-[11px]">Case Success</div>
-                                        </div>
+                                        <Link
+                                            to="/about"
+                                            className=""
+                                        >
+                                            Read More
+                                        </Link>
                                     </motion.div>
                                 </div>
 
-                                <motion.div
+                                {/* <motion.div
                                     initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
                                     whileInView={{
                                         opacity: 1,
@@ -166,7 +165,7 @@ export default function AboutPage() {
                                     >
                                         Read More
                                     </Link>
-                                </motion.div>
+                                </motion.div> */}
                             </motion.div>
 
                         </motion.div>
