@@ -33,8 +33,7 @@ export default function Footer() {
                         </h1>
                         <div className="space-y-4 text-white">
                             <p className="text-lg">
-                                <span className="font-medium">Telephone Number:</span> +233 303
-                                966 645
+                                <span className="font-medium">Telephone Number:</span> 054 012 5722
                             </p>
                             <p className="text-lg">
                                 <span className="font-medium">Email:</span> Info@kbakuffo.com

@@ -120,12 +120,12 @@ export default function AboutPage() {
                             {/* Stats & CTA */}
                             <motion.div
                                 variants={fadeIn}
-                                className="mt-6 flex flex-row flex-wrap items-center gap-2 sm:flex-col sm:items-start sm:gap-4"
+                                className="mt-6 flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-6"
                             >
-                                <div className="flex flex-row flex-wrap items-center gap-2 sm:gap-3">
+                                <div className="flex flex-row flex-wrap items-center gap-2 sm:gap-3 w-full md:w-auto">
                                     <motion.div
                                         variants={fadeInUp}
-                                        className="flex items-center gap-2 border px-2.5 py-1.5 bg-[#7E1835] sm:px-3 sm:py-2"
+                                        className="flex items-center justify-center md:justify-start gap-2 border px-2.5 py-2 bg-[#7E1835] sm:px-3 sm:py-2 w-full md:w-auto"
                                     >
                                         <div className="inline-flex h-[28px] w-[28px] items-center justify-center rounded-full bg-white/10 text-white sm:h-8 sm:w-8">
                                             <Award className="h-[14px] w-[14px] sm:h-4 sm:w-4" />
@@ -136,7 +136,7 @@ export default function AboutPage() {
                                         </div>
                                     </motion.div>
 
-                                    <motion.div
+                                    {/* <motion.div
                                         variants={fadeInUp}
                                         className="flex items-center gap-2 border px-3.5 py-1.5 bg-[#F2E8EB] sm:px-6 sm:py-2"
                                     >
@@ -147,7 +147,7 @@ export default function AboutPage() {
                                             <div className="text-xs font-semibold sm:text-sm">98%</div>
                                             <div className="text-[10px] text-gray-500 sm:text-[11px]">Case Success</div>
                                         </div>
-                                    </motion.div>
+                                    </motion.div> */}
                                 </div>
 
                                 <motion.div
@@ -158,11 +158,11 @@ export default function AboutPage() {
                                         transition: { duration: prefersReducedMotion ? 0 : 0.45 },
                                     }}
                                     viewport={{ once: true, amount: 0.3 }}
-                                    className="mt-2 sm:mt-4"
+                                    className="w-full md:w-auto"
                                 >
                                     <Link
                                         to="/about"
-                                        className="w-auto bg-[#7E1835] px-6 py-3 text-sm text-white hover:bg-[#6b1824] focus:outline-none sm:w-full sm:px-10 sm:py-4 sm:text-base"
+                                        className="block w-full text-center bg-[#7E1835] px-6 py-3 text-sm text-white hover:bg-[#6b1824] focus:outline-none md:inline-block md:w-auto md:px-10 md:py-4 md:text-base"
                                     >
                                         Read More
                                     </Link>

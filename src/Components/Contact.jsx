@@ -132,7 +132,7 @@ export default function ContactSection() {
                         <div className="space-y-8">
                             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                                 <h3 className="text-[#7E1835] font-medium mb-4">Telephone:</h3>
-                                <p className="text-gray-800">(233) 303 966 645</p>
+                                <p className="text-gray-800">054 012 5722</p>
                             </div>
 
                             <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>

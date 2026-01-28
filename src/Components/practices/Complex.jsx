@@ -102,7 +102,7 @@ const Complex = () => {
                         </div>
                         <div className="flex flex-col text-white">
                             <span className="underline">Call Us On:</span>
-                            <span>0303966645 / 0244284702</span>
+                            <span>054 012 5722</span>
                         </div>
                     </motion.div>
 
@@ -171,7 +171,7 @@ const Complex = () => {
                             </div>
                             <div>
                                 <div className="underline text-xs">Call Us On:</div>
-                                <div className="text-xs">0303966645 / 0244284702</div>
+                                <div className="text-xs">054 012 5722</div>
                             </div>
                         </div>
 

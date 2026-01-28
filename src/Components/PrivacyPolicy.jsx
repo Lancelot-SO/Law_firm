@@ -146,7 +146,7 @@ const PrivacyPolicy = ({ isOpen, onClose }) => {
                                 Kwame Akuffo &amp; Co. Unlimited <br />
                                 Capital Place, 11 Patrice Lumumba Road <br />
                                 Airport Residential Area, Accra, Ghana <br />
-                                Tel: 0303966645 / 0244284702 <br />
+                                Tel: 054 012 5722 <br />
                                 Email:{" "}
                                 <a
                                     href="mailto:kwame@kbakuffo.com"
