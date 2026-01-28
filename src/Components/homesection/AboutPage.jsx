@@ -136,17 +136,22 @@ export default function AboutPage() {
                                         </div>
                                     </motion.div>
 
-                                    {/* <motion.div
-                                        variants={fadeInUp}
-                                        className="flex items-center gap-2 border px-3.5 py-1.5 bg-[#7E1835] hover:bg-[#7E1835]/90 sm:px-6 sm:py-2 text-white"
+                                    <motion.div
+                                        initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
+                                        whileInView={{
+                                            opacity: 1,
+                                            y: 0,
+                                            transition: { duration: prefersReducedMotion ? 0 : 0.45 },
+                                        }}
+                                        viewport={{ once: true, amount: 0.3 }}
+                                        className="w-full md:w-auto"
                                     >
-                                        <div className="inline-flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#7E1835]/10 text-[#7E1835] sm:h-8 sm:w-8">
-                                            <CheckCircle2 className="h-[14px] w-[14px] sm:h-4 sm:w-4" />
-                                        </div>
-                                        <div className="leading-tight">
-                                            <div className="text-xs font-semibold sm:text-sm">98%</div>
-                                            <div className="text-[10px] text-gray-500 sm:text-[11px]">Case Success</div>
-                                        </div>
+                                        <Link
+                                            to="/about"
+                                            className="block w-full text-center bg-[#7E1835] px-6 py-3 text-sm text-white hover:bg-[#6b1824] focus:outline-none md:inline-block md:w-auto md:px-10 md:py-4 md:text-base"
+                                        >
+                                            Read More
+                                        </Link>
                                     </motion.div>
                                 </div>
 
